@@ -1,0 +1,71 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|l|l|l|l|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    {\color[HTML]{FFFFFF} Loss type} &
+    {\color[HTML]{FFFFFF} Loss} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} PPV}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TPR}} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{{\color[HTML]{000000} 1}} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    {\color[HTML]{000000} CE} &
+    {\color[HTML]{000000} 0.548} &
+    {\color[HTML]{000000} 0.745} &
+    {\color[HTML]{000000} 0.662} &
+    {\color[HTML]{000000} PPV} \\ \hline
+  \multicolumn{1}{|c|}{{\color[HTML]{000000} 2}} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    {\color[HTML]{000000} FL} &
+    {\color[HTML]{000000} 0.584} &
+    {\color[HTML]{000000} 0.794} &
+    {\color[HTML]{000000} 0.703} &
+    {\color[HTML]{000000} PPV} \\ \hline
+  \multicolumn{1}{|c|}{{\color[HTML]{000000} 3}} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    {\color[HTML]{000000} DL} &
+    {\color[HTML]{000000} 0.548} &
+    {\color[HTML]{000000} 0.714} &
+    {\color[HTML]{000000} 0.677} &
+    {\color[HTML]{000000} PPV} \\ \hline
+  \multicolumn{1}{|c|}{{\color[HTML]{000000} \textit{\textbf{4}}}} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} \textit{\textbf{RB}}} &
+    {\color[HTML]{000000} \textit{\textbf{TL}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.626}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.786}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.775}}} &
+    {\color[HTML]{000000} \textit{\textbf{PPV}}} \\ \hline
+  \multicolumn{1}{|c|}{{\color[HTML]{000000} 5}} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    {\color[HTML]{000000} HL\textsubscript{1}} &
+    {\color[HTML]{000000} 0.507} &
+    {\color[HTML]{000000} 0.748} &
+    {\color[HTML]{000000} 0.630} &
+    {\color[HTML]{000000} PPV} \\ \hline
+  \multicolumn{1}{|c|}{{\color[HTML]{000000} 6}} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    {\color[HTML]{000000} BL} &
+    {\color[HTML]{000000} 0.299} &
+    {\color[HTML]{000000} 0.502} &
+    {\color[HTML]{000000} 0.508} &
+    {\color[HTML]{000000} TPR} \\ \hline
+  {\color[HTML]{000000} } &
+    {\color[HTML]{000000} } &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.519}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.715}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.659}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{3-7} 
+  \end{tabular}%
+  }
+  \caption{The table presents a summary of the average values of various metrics for six baseline models trained for each loss function and each selection percentage. The total number of models trained for this baseline result is 18. The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:baseline_skin_lesion_short_18}
+  \end{table}

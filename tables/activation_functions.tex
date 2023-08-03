@@ -1,0 +1,16 @@
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|l|}
+        \hline
+        \rowcolor[HTML]{6638B6}
+        {\color[HTML]{FFFFFF} Name} & \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Formula}} \\ \hline
+        Sigmoid                     & $\phi(z)=\frac{1}{1+e^{-z}}$                                                \\ \hline
+        Tanh                        & $\phi(z)=\frac{e^{2z}-1}{e^{2z}+1}$                                         \\ \hline
+        Relu                        & $\phi(z)=\max\{0,z\}$                                                       \\ \hline
+    \end{tabular}
+    \caption{List of some popular activation functions used in \acp{NN}}
+    \label{tab:activation_functions}
+\end{table}

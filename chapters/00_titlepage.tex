@@ -1,0 +1,68 @@
+\makeatletter
+\begin{titlepage}
+    \begin{center}
+        \includegraphics[scale=0.25]{images/Logo_KIT_RWU.png}
+        \vskip 7em {\usekomafont{disposition}\color{rwuviolet}\huge \@title \par}
+        \vskip 0.5em {\usekomafont{disposition}\color{rwucyan}\Large \@subtitle \par}
+    \end{center}
+    \noindent
+    \null\vfill
+    \noindent
+
+    \arrayrulecolor{kitgreen}
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{p{0.22\textwidth}|ll}
+            Author:            &  & Martin Samuel Lanz               \\
+                               &  & \small{Matr.-No.: 33808}         \\
+                               &  & \small{martin.lanz@rwu.de}       \\
+                               &  &                                  \\
+            First Supervisor:  &  & Prof. Dr. rer. nat. Stefan Elser \\
+                               &  & \small{stefan.elser@rwu.de}      \\
+                               &  &                                  \\
+            Second Supervisor: &  & apl. Prof. Dr. Markus Reischl    \\
+                               &  & \small{markus.reischl@kit.edu}   \\
+        \end{tabular}
+    \end{table}
+    \arrayrulecolor{black}
+
+    \titlepagedecoration
+
+    \begin{center}
+        submitted on:\\[5mm]
+        \footnotesize \today \\[5mm] \footnotesize SS 23 \\[3cm]
+    \end{center}
+\end{titlepage}
+
+\makeatother
+
+%Abstract,Acknowledgements
+\begin{newpage}
+    \vspace*{\fill}
+    \section*{Abstract}
+    Semantic segmentation is an important task in computer vision, aiming to assign a class label to every pixel in an image, enabling applications such as autonomous driving, medical image analysis, or facial recognition. Deep learning has significantly improved semantic segmentation performance in recent years. However, optimizing loss functions remains an open challenge due to critical limitations if used individually. This project investigates six popular loss functions and introduces a merging framework to form new combined losses, addressing these limitations and improving segmentation performance.
+
+    The project begins by providing a comprehensive overview of the fundamentals of \acf{ML} and semantic segmentation, including terminology, objectives, metrics, and architectures. The literature review covers a broad range of techniques for generally improving semantic segmentation. Subsequently, the limiting factors of six loss functions are discussed, and a methodology is proposed to merge multiple losses into a single final loss, which aims to address the shortcomings of models trained with standard single losses.
+
+    A U-Net-based segmentation framework is presented to validate the approach, incorporating all theoretically described methods in code. Several experiments on multiple datasets are conducted to compare the performance of the proposed methods against baseline models trained with single losses. Quantitative and qualitative results are presented, along with an ablation study to evaluate further the impact of the presented loss merging strategies.
+
+    This unified approach demonstrates that combining multiple loss functions can significantly improve semantic segmentation performance for a whole set of loss combinations across multiple datasets. The project aims to contribute to advancing semantic segmentation research and provides a foundation for future investigations into more effective loss function design and optimization.
+\end{newpage}
+
+\begin{newpage}
+    \vspace*{\fill}
+    \section*{Acknowledgements}
+    I want to express my sincere gratitude to several individuals who have been instrumental in the successful completion of my Master's thesis.
+
+    Firstly, my appreciation goes to Doctoral Researcher Luca Rettenberger, my principal supervisor. His guidance and regular feedback during our weekly meetings were essential to the development and direction of this thesis. His commitment to my academic progress is highly regarded.
+
+    I am also thankful to Prof. Dr. rer. nat. Stefan Elser, my professor, and first reviewer, who has provided substantial support. His contribution, including organizational effort and regular meetings, has been significant and invaluable to this project.
+
+    My gratitude extends to apl. Prof. Dr. Markus Reischl, whose constructive feedback during the midterm presentation significantly influenced the path of this research. His academic insights are appreciated.
+
+    I would also like to acknowledge my father, for his unwavering and consistent support throughout my life and studies. His patience and enduring belief in my potential have not only been a source of strength but also a continuous motivator. His support has been instrumental in every step I've taken, fostering my personal and academic growth.
+
+    Finally, I am deeply grateful to my wife. Her unwavering support, patience, and dedication throughout these years have been of utmost importance to me. Her belief in me has motivated me constantly during this journey.
+
+    In conclusion, I want to express my heartfelt thanks to everyone who contributed to this work. Your collective efforts and support have been fundamental to completing this thesis.
+\end{newpage}

@@ -1,0 +1,103 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|l|l|l|l|l|l|l|l|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    {\color[HTML]{FFFFFF} Loss type} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{\textit{\textbf{1}}} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} \textit{\textbf{DB}}} &
+    \textit{\textbf{CE}} &
+    \textit{\textbf{0.672}} &
+    \textit{\textbf{0.976}} &
+    \textit{\textbf{0.697}} &
+    \textit{\textbf{0.530}} &
+    \textit{\textbf{0.485}} &
+    \textit{\textbf{0.808}} &
+    \textit{\textbf{0.766}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{\textit{\textbf{2}}} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} \textit{\textbf{DB}}} &
+    \textit{\textbf{FL}} &
+    \textit{\textbf{0.672}} &
+    \textit{\textbf{0.976}} &
+    \textit{\textbf{0.750}} &
+    \textit{\textbf{0.515}} &
+    \textit{\textbf{0.445}} &
+    \textit{\textbf{0.814}} &
+    \textit{\textbf{0.762}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    0.633 &
+    0.973 &
+    0.673 &
+    0.465 &
+    0.421 &
+    0.782 &
+    0.725 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    0.630 &
+    0.971 &
+    0.656 &
+    0.408 &
+    0.487 &
+    0.736 &
+    0.749 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.542 &
+    0.968 &
+    0.343 &
+    0.462 &
+    0.394 &
+    0.678 &
+    0.595 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.096 &
+    0.329 &
+    0.016 &
+    0.011 &
+    0.027 &
+    0.252 &
+    0.259 &
+    TPR \\ \hline
+   &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.528}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.850}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.502}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.392}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.366}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.667}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.629}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{3-11} 
+  \end{tabular}%
+  }
+  \caption[Overall baseline results for the Medaka Fish dataset]{The table presents a summary of the average values of various metrics for six baseline models trained for each loss function and each selection percentage. The total number of models trained for this baseline result is 108. The columns $IoU_0,\hdots,IoU_3$ represent the four classes, Background, Bublus, Atriums and Ventricle. The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:baseline_medaka_short}
+  \end{table}

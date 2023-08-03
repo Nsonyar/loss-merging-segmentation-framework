@@ -1,0 +1,405 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{ccl|l|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} IoU 4} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \multicolumn{1}{c|}{66} &
+    Focal,Dice,Boundary &
+    AVG &
+    0.411 &
+    0.948 &
+    0.223 &
+    0.325 &
+    0.185 &
+    0.375 &
+    0.667 &
+    0.520 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \multicolumn{1}{c|}{39} &
+    CE,Dice,Boundary &
+    AVG &
+    0.387 &
+    0.935 &
+    0.069 &
+    0.306 &
+    0.136 &
+    0.488 &
+    0.612 &
+    0.498 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \multicolumn{1}{c|}{47} &
+    CE,Dice,Boundary &
+    AVG &
+    0.366 &
+    0.956 &
+    0.131 &
+    0.265 &
+    0.159 &
+    0.318 &
+    0.594 &
+    0.482 &
+    PPV \\ \hline
+  \textbf{} &
+    \textit{\textbf{}} &
+    \textbf{} &
+    \textit{\textbf{AVG Result}} &
+    \textit{\textbf{0.388}} &
+    \textit{\textbf{0.947}} &
+    \textit{\textbf{0.141}} &
+    \textit{\textbf{0.299}} &
+    \textit{\textbf{0.160}} &
+    \textit{\textbf{0.394}} &
+    \textit{\textbf{0.625}} &
+    \textit{\textbf{0.500}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \multicolumn{1}{c|}{40} &
+    Focal,Tversky,Boundary &
+    HARMONIC &
+    0.320 &
+    0.928 &
+    0.003 &
+    0.215 &
+    0.000 &
+    0.455 &
+    0.463 &
+    0.408 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \multicolumn{1}{c|}{167} &
+    Focal,Dice,HD &
+    HARMONIC &
+    0.318 &
+    0.940 &
+    0.009 &
+    0.249 &
+    0.008 &
+    0.386 &
+    0.545 &
+    0.404 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \multicolumn{1}{c|}{39} &
+    CE,Dice,Boundary &
+    HARMONIC &
+    0.318 &
+    0.924 &
+    0.005 &
+    0.132 &
+    0.000 &
+    0.527 &
+    0.454 &
+    0.397 &
+    PPV \\ \hline
+  \textbf{} &
+    \textit{\textbf{}} &
+    \textbf{} &
+    \textit{\textbf{HARMONIC Result}} &
+    \textit{\textbf{0.319}} &
+    \textit{\textbf{0.931}} &
+    \textit{\textbf{0.006}} &
+    \textit{\textbf{0.199}} &
+    \textit{\textbf{0.003}} &
+    \textit{\textbf{0.456}} &
+    \textit{\textbf{0.487}} &
+    \textit{\textbf{0.403}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \multicolumn{1}{c|}{36} &
+    CE,Tversky,Boundary &
+    MAX &
+    0.324 &
+    0.866 &
+    0.056 &
+    0.247 &
+    0.066 &
+    0.385 &
+    0.490 &
+    0.451 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{8} &
+    \multicolumn{1}{c|}{45} &
+    CE,Dice,Boundary &
+    MAX &
+    0.296 &
+    0.943 &
+    0.075 &
+    0.229 &
+    0.072 &
+    0.162 &
+    0.515 &
+    0.412 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{9} &
+    \multicolumn{1}{c|}{108} &
+    Focal,Dice,HD &
+    MAX &
+    0.288 &
+    0.928 &
+    0.001 &
+    0.264 &
+    0.000 &
+    0.247 &
+    0.406 &
+    0.379 &
+    PPV \\ \hline
+  \textbf{} &
+    \textit{\textbf{}} &
+    \textbf{} &
+    \textit{\textbf{MAX Result}} &
+    \textit{\textbf{0.303}} &
+    \textit{\textbf{0.912}} &
+    \textit{\textbf{0.044}} &
+    \textit{\textbf{0.247}} &
+    \textit{\textbf{0.046}} &
+    \textit{\textbf{0.265}} &
+    \textit{\textbf{0.470}} &
+    \textit{\textbf{0.414}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{10} &
+    \multicolumn{1}{c|}{61} &
+    Focal,Tversky,HD &
+    MIN &
+    0.334 &
+    0.944 &
+    0.002 &
+    0.276 &
+    0.030 &
+    0.417 &
+    0.554 &
+    0.422 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{11} &
+    \multicolumn{1}{c|}{61} &
+    Focal,Dice,HD &
+    MIN &
+    0.332 &
+    0.946 &
+    0.002 &
+    0.281 &
+    0.008 &
+    0.424 &
+    0.567 &
+    0.404 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{12} &
+    \multicolumn{1}{c|}{84} &
+    Focal,Dice,HD &
+    MIN &
+    0.304 &
+    0.955 &
+    0.002 &
+    0.240 &
+    0.035 &
+    0.288 &
+    0.498 &
+    0.392 &
+    PPV \\ \hline
+  \textbf{} &
+    \textit{\textbf{}} &
+    \textbf{} &
+    \textit{\textbf{MIN Result}} &
+    \textit{\textbf{0.323}} &
+    \textit{\textbf{0.949}} &
+    \textit{\textbf{0.002}} &
+    \textit{\textbf{0.266}} &
+    \textit{\textbf{0.024}} &
+    \textit{\textbf{0.376}} &
+    \textit{\textbf{0.540}} &
+    \textit{\textbf{0.406}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{13} &
+    \multicolumn{1}{c|}{67} &
+    Focal,Dice,Boundary &
+    NWS &
+    0.363 &
+    0.935 &
+    0.054 &
+    0.281 &
+    0.121 &
+    0.421 &
+    0.587 &
+    0.459 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{14} &
+    \multicolumn{1}{c|}{94} &
+    CE,Tversky,Boundary &
+    NWS &
+    0.359 &
+    0.955 &
+    0.135 &
+    0.278 &
+    0.176 &
+    0.250 &
+    0.622 &
+    0.476 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{15} &
+    \multicolumn{1}{c|}{39} &
+    CE,Tversky,Boundary &
+    NWS &
+    0.349 &
+    0.944 &
+    0.199 &
+    0.236 &
+    0.175 &
+    0.189 &
+    0.631 &
+    0.487 &
+    PPV \\ \hline
+  \textbf{} &
+    \textit{\textbf{}} &
+    \textbf{} &
+    \textit{\textbf{NWS Result}} &
+    \textit{\textbf{0.357}} &
+    \textit{\textbf{0.945}} &
+    \textit{\textbf{0.129}} &
+    \textit{\textbf{0.265}} &
+    \textit{\textbf{0.157}} &
+    \textit{\textbf{0.287}} &
+    \textit{\textbf{0.613}} &
+    \textit{\textbf{0.474}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{16} &
+    \multicolumn{1}{c|}{72} &
+    Focal,Tversky,Boundary &
+    PBM (5.9,0.83) &
+    0.402 &
+    0.931 &
+    0.179 &
+    0.329 &
+    0.121 &
+    0.448 &
+    0.643 &
+    0.515 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{17} &
+    \multicolumn{1}{c|}{34} &
+    Focal,Dice,Boundary &
+    PBM (1.0,1.0) &
+    0.377 &
+    0.934 &
+    0.046 &
+    0.324 &
+    0.088 &
+    0.493 &
+    0.629 &
+    0.485 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{18} &
+    \multicolumn{1}{c|}{25} &
+    Focal,Tversky,Boundary &
+    PBM (5.0,0.7) &
+    0.360 &
+    0.959 &
+    0.095 &
+    0.271 &
+    0.000 &
+    0.477 &
+    0.499 &
+    0.457 &
+    PPV \\ \hline
+  \textbf{} &
+    \textit{\textbf{}} &
+    \textbf{} &
+    \textit{\textbf{PBM Result}} &
+    \textit{\textbf{0.380}} &
+    \textit{\textbf{0.941}} &
+    \textit{\textbf{0.107}} &
+    \textit{\textbf{0.308}} &
+    \textit{\textbf{0.069}} &
+    \textit{\textbf{0.473}} &
+    \textit{\textbf{0.590}} &
+    \textit{\textbf{0.486}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{19} &
+    \multicolumn{1}{c|}{75} &
+    Focal,Dice,Boundary &
+    WS &
+    0.368 &
+    0.936 &
+    0.107 &
+    0.291 &
+    0.135 &
+    0.370 &
+    0.617 &
+    0.475 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{20} &
+    \multicolumn{1}{c|}{38} &
+    CE,Tversky,Boundary &
+    WS &
+    0.367 &
+    0.885 &
+    0.111 &
+    0.304 &
+    0.126 &
+    0.406 &
+    0.604 &
+    0.482 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{21} &
+    \multicolumn{1}{c|}{108} &
+    CE,Tversky,Boundary &
+    WS &
+    0.352 &
+    0.952 &
+    0.141 &
+    0.252 &
+    0.123 &
+    0.294 &
+    0.554 &
+    0.459 &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+     &
+    \textit{\textbf{WS Result}} &
+    \textit{\textbf{0.362}} &
+    \textit{\textbf{0.925}} &
+    \textit{\textbf{0.119}} &
+    \textit{\textbf{0.282}} &
+    \textit{\textbf{0.128}} &
+    \textit{\textbf{0.357}} &
+    \textit{\textbf{0.592}} &
+    \textit{\textbf{0.472}} &
+    \textit{\textbf{PPV}} \\ \cline{4-13} 
+   &
+    \textit{\textbf{}} &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.347}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.935}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.078}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.266}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.084}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.372}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.560}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.451}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{4-13} 
+  \end{tabular}%
+  }
+  \caption{Table contains 18 trained models representing the top 3 triple loss combinations for all merge strategies except TBM. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:merge_strategy_results_idrid_triple_long_v2}
+  \end{table}

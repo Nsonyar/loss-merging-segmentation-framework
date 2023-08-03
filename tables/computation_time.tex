@@ -1,0 +1,120 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{ccccrrrrc}
+  \multicolumn{1}{l}{} &
+    \multicolumn{1}{l}{} &
+    \multicolumn{1}{l}{} &
+    \multicolumn{1}{l}{} &
+    \multicolumn{3}{c}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Dataset size}} &
+    \multicolumn{1}{l}{} &
+    \multicolumn{1}{l}{} \\ \hline
+  \rowcolor[HTML]{6638B6} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Config. No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Dataset}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Config type}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Model count}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} 100\% (h)}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} 64\% (h)}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} 32\% (h)}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Total (h)}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Time per model (h)}} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \multicolumn{1}{c|}{Medaka} &
+    \multicolumn{1}{c|}{Baseline} &
+    \multicolumn{1}{c|}{18} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 4.1}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 2.5}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 1.8}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 8.4}} &
+    \multicolumn{1}{c|}{0.46} \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \multicolumn{1}{c|}{Medaka} &
+    \multicolumn{1}{c|}{Discrete} &
+    \multicolumn{1}{c|}{360} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 119.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 80.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 46.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 245.0}} &
+    \multicolumn{1}{c|}{0.68} \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \multicolumn{1}{c|}{Medaka} &
+    \multicolumn{1}{c|}{Continous} &
+    \multicolumn{1}{c|}{217} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 94.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 42.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 23.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 159.0}} &
+    \multicolumn{1}{c|}{0.73} \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \multicolumn{1}{c|}{Skin lesion} &
+    \multicolumn{1}{c|}{Baseline} &
+    \multicolumn{1}{c|}{18} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 8.6}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 6.6}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 3.1}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 18.3}} &
+    \multicolumn{1}{c|}{1.02} \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \multicolumn{1}{c|}{Skin lesion} &
+    \multicolumn{1}{c|}{Discrete} &
+    \multicolumn{1}{c|}{360} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 367.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 240.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 127.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 734.0}} &
+    \multicolumn{1}{c|}{2.00} \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \multicolumn{1}{c|}{Skin lesion} &
+    \multicolumn{1}{c|}{Continous} &
+    \multicolumn{1}{c|}{146} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 121.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 65.8}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 37.8}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 224.6}} &
+    \multicolumn{1}{c|}{1.50} \\ \hline
+  \multicolumn{1}{|c|}{9} &
+    \multicolumn{1}{c|}{IDRID} &
+    \multicolumn{1}{c|}{Baseline} &
+    \multicolumn{1}{c|}{6} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 2.5}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 2.5}} &
+    \multicolumn{1}{c|}{0.40} \\ \hline
+  \multicolumn{1}{|c|}{10} &
+    \multicolumn{1}{c|}{IDRID} &
+    \multicolumn{1}{c|}{Discrete} &
+    \multicolumn{1}{c|}{120} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 150.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 150.0}} &
+    \multicolumn{1}{c|}{1.30} \\ \hline
+  \multicolumn{1}{|c|}{11} &
+    \multicolumn{1}{c|}{IDRID} &
+    \multicolumn{1}{c|}{Continous} &
+    \multicolumn{1}{c|}{430} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 302.0}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} 302.0}} &
+    \multicolumn{1}{c|}{0.70} \\ \hline
+   &
+    \multicolumn{1}{c|}{} &
+    \multicolumn{1}{c|}{\textit{\textbf{Final Result}}} &
+    \multicolumn{1}{c|}{\textit{\textbf{1675}}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} \textit{\textbf{1168.2}}}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} \textit{\textbf{436.9}}}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} \textit{\textbf{238.7}}}} &
+    \multicolumn{1}{r|}{{\color[HTML]{000000} \textit{\textbf{1843.8}}}} &
+    \multicolumn{1}{c|}{\textit{\textbf{0.97}}} \\ \cline{3-9} 
+  \end{tabular}%
+  }
+  \caption[Computation time]{Table displays the final computation time for the configurations defined in table \ref{tab:final_configuration_list}. The time-based merging configurations are skipped at this point as they were left out for the experiment.}
+  \label{tab:computation_time}
+  \end{table}

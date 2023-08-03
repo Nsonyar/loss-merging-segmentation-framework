@@ -1,0 +1,127 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{llllllllllll}
+     &
+      \multicolumn{7}{c}{False positive misclassification} &
+       &
+       &
+       &
+       \\ \cline{2-12} 
+    \multicolumn{1}{l|}{\textbf{Balanced}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} PPV}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TPR}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TNR}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} NPV}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Dice}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} ACC}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} TP}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} FP}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} FN}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} TN}} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TP(12) : TN(12)}} &
+      \multicolumn{1}{l|}{0.923} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{0.923} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{0.923} &
+      \multicolumn{1}{l|}{0.960} &
+      \multicolumn{1}{l|}{0.960} &
+      \multicolumn{1}{l|}{12} &
+      \multicolumn{1}{l|}{1} &
+      \multicolumn{1}{l|}{0} &
+      \multicolumn{1}{l|}{12} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TP(12) : TN(13)}} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{12} &
+      \multicolumn{1}{l|}{0} &
+      \multicolumn{1}{l|}{0} &
+      \multicolumn{1}{l|}{13} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Difference}} &
+      \multicolumn{1}{l|}{7.69\%} &
+      \multicolumn{1}{l|}{0.00\%} &
+      \multicolumn{1}{l|}{7.69\%} &
+      \multicolumn{1}{l|}{0.00\%} &
+      \multicolumn{1}{l|}{7.69\%} &
+      \multicolumn{1}{l|}{4.00\%} &
+      \multicolumn{1}{l|}{4.00\%} &
+       &
+       &
+       &
+       \\ \cline{1-8}
+     &
+       &
+       &
+       &
+       &
+       &
+       &
+       &
+       &
+       &
+       &
+       \\ \cline{2-12} 
+    \multicolumn{1}{l|}{\textbf{Imbalanced}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} PPV}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TPR}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TNR}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} NPV}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Dice}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} ACC}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} TP}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} FP}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} FN}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} TN}} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TP(3) : TN(21)}} &
+      \multicolumn{1}{l|}{0.750} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{0.955} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}1.000} &
+      \multicolumn{1}{l|}{0.750} &
+      \multicolumn{1}{l|}{0.857} &
+      \multicolumn{1}{l|}{0.960} &
+      \multicolumn{1}{l|}{3} &
+      \multicolumn{1}{l|}{1} &
+      \multicolumn{1}{l|}{0} &
+      \multicolumn{1}{l|}{21} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TP(3) : TN(22)}} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{1.000} &
+      \multicolumn{1}{l|}{3} &
+      \multicolumn{1}{l|}{0} &
+      \multicolumn{1}{l|}{0} &
+      \multicolumn{1}{l|}{22} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Difference}} &
+      \multicolumn{1}{l|}{25.00\%} &
+      \multicolumn{1}{l|}{0.00\%} &
+      \multicolumn{1}{l|}{4.55\%} &
+      \multicolumn{1}{l|}{0.00\%} &
+      \multicolumn{1}{l|}{25.00\%} &
+      \multicolumn{1}{l|}{14.29\%} &
+      \multicolumn{1}{l|}{4.00\%} &
+       &
+       &
+       &
+       \\ \cline{1-8}
+    \end{tabular}%
+    }
+    \caption[Metric comparison - False positive misclassification]{Similar as the tables above do these tables illustrate the score difference in percent by misclassifying one pixel as false positive for a balanced label at the top, and an imbalanced label at the bottom. We can see again that the \ac{IoU} and \ac{DSC} properly reflect the change by a much larger difference percentage in comparison to accuracy. As the misclassified pixel was a true positive, recall here stays unaffected while precision decreases by $25.00\%$}
+    \label{tab:metric_comparison_2}
+    \end{table}

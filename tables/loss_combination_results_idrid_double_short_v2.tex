@@ -1,0 +1,183 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|l|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    {\color[HTML]{FFFFFF} R-time(m)} &
+    {\color[HTML]{FFFFFF} Loss combination} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} Iou 4} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \textit{339} &
+    \textit{Boundary,CE} &
+    \textit{0.333} &
+    \textit{0.937} &
+    \textit{0.012} &
+    \textit{0.266} &
+    \textit{0.000} &
+    \textit{0.452} &
+    \textit{0.501} &
+    \textit{0.406} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \textit{271} &
+    \textit{Boundary,Focal} &
+    \textit{0.342} &
+    \textit{0.945} &
+    \textit{0.074} &
+    \textit{0.303} &
+    \textit{0.037} &
+    \textit{0.352} &
+    \textit{0.568} &
+    \textit{0.417} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \textit{62} &
+    \textit{CE,Dice} &
+    \textit{0.390} &
+    \textit{0.937} &
+    \textit{0.137} &
+    \textit{0.321} &
+    \textit{0.139} &
+    \textit{0.418} &
+    \textit{0.667} &
+    \textit{0.484} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{\textbf{4}} &
+    \textit{\textbf{70}} &
+    \textit{\textbf{CE,Tversky}} &
+    \textit{\textbf{0.403}} &
+    \textit{\textbf{0.942}} &
+    \textit{\textbf{0.170}} &
+    \textit{\textbf{0.325}} &
+    \textit{\textbf{0.163}} &
+    \textit{\textbf{0.418}} &
+    \textit{\textbf{0.637}} &
+    \textit{\textbf{0.512}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \textit{166} &
+    \textit{Dice,Boundary} &
+    \textit{0.376} &
+    \textit{0.950} &
+    \textit{0.105} &
+    \textit{0.296} &
+    \textit{0.148} &
+    \textit{0.381} &
+    \textit{0.630} &
+    \textit{0.469} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \textit{320} &
+    \textit{Dice,HD} &
+    \textit{0.280} &
+    \textit{0.921} &
+    \textit{0.021} &
+    \textit{0.164} &
+    \textit{0.030} &
+    \textit{0.263} &
+    \textit{0.406} &
+    \textit{0.369} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \textit{49} &
+    \textit{Focal,Dice} &
+    \textit{0.379} &
+    \textit{0.926} &
+    \textit{0.143} &
+    \textit{0.316} &
+    \textit{0.082} &
+    \textit{0.428} &
+    \textit{0.627} &
+    \textit{0.490} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{8} &
+    \textit{92} &
+    \textit{Focal,Tversky} &
+    \textit{0.387} &
+    \textit{0.914} &
+    \textit{0.184} &
+    \textit{0.334} &
+    \textit{0.157} &
+    \textit{0.344} &
+    \textit{0.570} &
+    \textit{0.520} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{9} &
+    \textit{295} &
+    \textit{HD,CE} &
+    \textit{0.308} &
+    \textit{0.945} &
+    \textit{0.003} &
+    \textit{0.205} &
+    \textit{0.000} &
+    \textit{0.389} &
+    \textit{0.430} &
+    \textit{0.382} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{10} &
+    \textit{239} &
+    \textit{HD,Focal} &
+    \textit{0.338} &
+    \textit{0.940} &
+    \textit{0.031} &
+    \textit{0.284} &
+    \textit{0.021} &
+    \textit{0.416} &
+    \textit{0.504} &
+    \textit{0.431} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{11} &
+    \textit{200} &
+    \textit{Tversky,Boundary} &
+    \textit{0.327} &
+    \textit{0.928} &
+    \textit{0.105} &
+    \textit{0.261} &
+    \textit{0.045} &
+    \textit{0.297} &
+    \textit{0.519} &
+    \textit{0.442} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{12} &
+    \textit{248} &
+    \textit{Tversky,HD} &
+    \textit{0.253} &
+    \textit{0.948} &
+    \textit{0.000} &
+    \textit{0.000} &
+    \textit{0.000} &
+    \textit{0.317} &
+    \textit{0.311} &
+    \textit{0.298} &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.343}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.936}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.082}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.256}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.068}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.373}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.531}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.435}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{PPV}} \\ \cline{3-12} 
+  \end{tabular}%
+  }
+  \caption{Table lists a summary of the top 3 results for every double loss combination. Individual models have been trained with different strategies. The full table with all 36 models can be viewed in the appendix in \secref{subsubsec:loss_combination_results_idrid_double_long_v2}. The averagely best double loss combination for this dataset with an \ac{IoU} of $0.403$ was achieved by the \ac{CE} combined with the \ac{TL}. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:loss_combination_results_idrid_double_short_v2}
+  \end{table}

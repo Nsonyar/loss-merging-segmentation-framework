@@ -1,0 +1,47 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ccl|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \rowcolor[HTML]{000000} 
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+      {\color[HTML]{FFFFFF} Loss} &
+      {\color[HTML]{FFFFFF} Strategy} &
+      {\color[HTML]{FFFFFF} IoU} &
+      {\color[HTML]{FFFFFF} IoU 0} &
+      {\color[HTML]{FFFFFF} IoU 1} &
+      {\color[HTML]{FFFFFF} IoU 2} &
+      {\color[HTML]{FFFFFF} IoU 3} &
+      {\color[HTML]{FFFFFF} IoU 4} &
+      {\color[HTML]{FFFFFF} PPV} &
+      {\color[HTML]{FFFFFF} TPR} &
+      {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+    \multicolumn{1}{|c|}{1} & \multicolumn{1}{c|}{51} & CE,DL & AVG & 0.398 & 0.964 & 0.083 & 0.323 & 0.097 & 0.521 & 0.646 & 0.462 & PPV \\ \hline
+    \multicolumn{1}{|c|}{2} & \multicolumn{1}{c|}{39} & CE,DL & AVG & 0.378 & 0.955 & 0.015 & 0.297 & 0.092 & 0.532 & 0.568 & 0.458 & PPV \\ \hline
+    \multicolumn{1}{|c|}{3} & \multicolumn{1}{c|}{38} & CE,DL & AVG & 0.377 & 0.964 & 0.071 & 0.326 & 0.105 & 0.417 & 0.707 & 0.429 & PPV \\ \hline
+    \multicolumn{1}{|c|}{4} & \multicolumn{1}{c|}{38} & CE,DL & AVG & 0.376 & 0.969 & 0.038 & 0.276 & 0.113 & 0.487 & 0.662 & 0.440 & PPV \\ \hline
+    \multicolumn{1}{|c|}{5} & \multicolumn{1}{c|}{52} & CE,DL & AVG & 0.376 & 0.956 & 0.178 & 0.249 & 0.189 & 0.307 & 0.647 & 0.460 & PPV \\ \hline
+    \multicolumn{1}{|c|}{6} & \multicolumn{1}{c|}{47} & CE,DL & AVG & 0.374 & 0.948 & 0.034 & 0.274 & 0.059 & 0.553 & 0.539 & 0.474 & PPV \\ \hline
+     &
+       &
+       &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.380}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.959}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.070}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.291}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.109}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.470}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.628}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.454}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{4-13} 
+    \end{tabular}%
+    }
+    \caption[Specific Combination IDRID]{Table lists six models trained repetitively on the loss combination \ac{CE}, \ac{DL} using the arithmetic averaging (AVG) strategy for merging. These results serve as part of a final comparison against baseline results providing an identical iteration number. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+    \label{tab:top_six_CEDL_idrid}
+    \end{table}

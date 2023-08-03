@@ -1,0 +1,12 @@
+FROM pytorchlightning/pytorch_lightning
+RUN apt-get update --fix-missing
+RUN pip install seaborn
+RUN pip install opencv-python
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+RUN pip install wandb
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir --upgrade pytorch-lightning==1.9.4
+RUN pip install --no-cache-dir --upgrade torchvision
+RUN pip install --no-cache-dir --upgrade torchmetrics
+COPY fonts/*.ttf /usr/share/fonts/truetype/
+

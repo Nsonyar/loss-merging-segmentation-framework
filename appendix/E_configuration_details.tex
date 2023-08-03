@@ -1,0 +1,412 @@
+\chapter{Configuration Details}
+\label{chap:configuration_details}
+
+\section{Parameter Definition}
+\label{sec:parameter_definition}
+This subsection presents a comprehensive overview of the parameters employed by the proposed method. Table \ref{tab:hyperparameters} offers a categorized list of all parameters, accompanied by a concise description, the variable name in the source code, the data type, the default value, and a flag indicating the default status. This flag signifies whether the default value has been modified for this project. Subsequent paragraphs explore each category, discussing the associated parameters and the rationale behind the selected values.
+
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|l|l|c|}
+      \hline
+      \rowcolor[HTML]{6638B6}
+      {\color[HTML]{FFFFFF} Category}                                                   &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Description}}   &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Variable name}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Data type}}     &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Default value}} &
+      {\color[HTML]{FFFFFF} Default status}                                               \\ \hline
+      Checkpoint and model saving                                                       &
+      Save top models per metric in training/validation.                                &
+      \texttt{save\_top\_k}                                                             &
+      int                                                                               &
+      $0$                                                                               &
+      \cross                                                                               \\ \hline
+      Checkpoint and model saving                                                       &
+      Flag for pre-trained checkpoint availability.                                     &
+      \texttt{checkpoint\_available}                                                    &
+      bool                                                                              &
+      False                                                                             &
+      \tick                                                                               \\ \hline
+      Data and evaluation                                                               &
+      Graphical test samples for W\&B logging.                                          &
+      \texttt{num\_tests}                                                               &
+      int                                                                               &
+      $5$                                                                               &
+      \tick                                                                               \\ \hline
+      Data and evaluation                                                               &
+      Train/validation dataset split ratio.                                             &
+      \texttt{split\_ratio}                                                             &
+      int                                                                               &
+      $5$                                                                               &
+      \tick                                                                               \\ \hline
+      Data and evaluation                                                               &
+      Calculates stats for each label \& averages them                                  &
+      \texttt{avg}                                                                      &
+      string                                                                            &
+      'macro'                                                                           &
+      \tick                                                                               \\ \hline
+      Data and evaluation                                                               &
+      Data selection \% for train/val/test subsets.                                     &
+      \texttt{selection\_percentage}                                                    &
+      float (0, 1{]}                                                                    &
+      $1$                                                                               &
+      \cross                                                                              \\ \hline
+      Data and evaluation                                                               &
+      Image size to train with.                                                         &
+      \texttt{img\_size}                                                                &
+      tuple                                                                             &
+      (256,256)                                                                         &
+      \cross                                                                              \\ \hline
+      Hardware and infrastructure                                                       &
+      GPU device(s) for training \& inference.                                          &
+      \texttt{gpu}                                                                      &
+      int                                                                               &
+      $0$                                                                               &
+      \cross                                                                              \\ \hline
+      Loss function                                                                     &
+      Tversky loss alpha \& beta parameters.                                            &
+      \texttt{tversky\_alpha}, \texttt{tversky\_beta}                                   &
+      float                                                                             &
+      $\alpha=0.3,\beta=0.7$                                                            &
+      \tick                                                                               \\ \hline
+      Loss function                                                                     &
+      Focal loss alpha \& gamma parameters.                                             &
+      \texttt{focal\_alpha}, \texttt{focal\_gamma}                                      &
+      float                                                                             &
+      $\alpha=\text{None},\gamma=2$                                                     &
+      \tick                                                                               \\ \hline
+      Loss function                                                                     &
+      Alpha parameter for the Hausdorff loss function.                                  &
+      \texttt{hd\_alpha}                                                                &
+      float                                                                             &
+      $2$                                                                               &
+      \tick                                                                               \\ \hline
+      Merge strategy WS                                                                 &
+      Weight contribution per loss for the WS strategy                                  &
+      \texttt{ws\_1}, \texttt{ws\_2}, \texttt{ws\_3}                                    &
+      float                                                                             &
+      $[1.0,1.0,0.1]$                                                                   &
+      \tick                                                                               \\ \hline
+      Merge strategy NWS                                                                &
+      Weight contribution per loss for the NWS strategy                                 &
+      \texttt{nws\_1}, \texttt{nws\_2}, \texttt{nws\_3}                                 &
+      float                                                                             &
+      $[1.0,1.0,0.1]$                                                                   &
+      \tick                                                                               \\ \hline
+      Merge strategy PBM                                                                &
+      Alpha parameter to control slope                                                  &
+      \texttt{pbm\_alpha}                                                               &
+      float \textgreater 1                                                              &
+      $2.0$                                                                             &
+      \cross                                                                              \\ \hline
+      Merge strategy PBM                                                                &
+      I parameter to control ascending or descending                                    &
+      \texttt{pbm\_I}                                                                   &
+      {[}0,1{]}                                                                         &
+      $1$                                                                               &
+      \cross                                                                              \\ \hline
+      Merge strategy TBM                                                                &
+      Time-based merging flag                                                           &
+      \texttt{time\_based\_merging}                                                     &
+      bool                                                                              &
+      False                                                                             &
+      \cross                                                                              \\ \hline
+      Merge strategy TBM                                                                &
+      Time-based merging for distribution loss control                                  &
+      \texttt{time\_based\_alpha}                                                       &
+      float \textgreater 1                                                              &
+      $2.0$                                                                             &
+      \tick                                                                               \\ \hline
+      Merge strategy TBM                                                                &
+      Time-based merging for region loss control                                        &
+      \texttt{time\_based\_beta}                                                        &
+      float \textgreater 1                                                              &
+      $2.0$                                                                             &
+      \tick                                                                               \\ \hline
+      Merge strategy TBM                                                                &
+      Time-based merging for boundary loss control                                      &
+      \texttt{time\_based\_gamma}                                                       &
+      float \textgreater 1                                                              &
+      $2.0$                                                                             &
+      \tick                                                                               \\ \hline
+      Merge strategy TBM                                                                &
+      Time-based merging for distribution loss control                                  &
+      \texttt{time\_based\_I\_1}                                                        &
+      float {[}0,1{]}                                                                   &
+      $1.0$                                                                             &
+      \cross                                                                              \\ \hline
+      Merge strategy TBM                                                                &
+      Time-based merging for region loss control                                        &
+      \texttt{time\_based\_I\_2}                                                        &
+      float {[}0,1{]}                                                                   &
+      $1.0$                                                                             &
+      \cross                                                                              \\ \hline
+      Merge strategy TBM                                                                &
+      Time-based merging for boundary loss control                                      &
+      time\_based\_I\_3                                                                 &
+      float {[}0,1{]}                                                                   &
+      $1.0$                                                                             &
+      \cross                                                                              \\ \hline
+      Model architecture                                                                &
+      Model architecture layers count                                                   &
+      \texttt{number\_layers}                                                           &
+      int                                                                               &
+      $5$                                                                               &
+      \tick                                                                               \\ \hline
+      Model architecture                                                                &
+      Initial features or channels count                                                &
+      \texttt{features\_start}                                                          &
+      int                                                                               &
+      $64$                                                                              &
+      \tick                                                                               \\ \hline
+      Model architecture                                                                &
+      Bilinear upsampling flag                                                          &
+      \texttt{bilinear}                                                                 &
+      bool                                                                              &
+      False                                                                             &
+      \tick                                                                               \\ \hline
+      Model architecture                                                                &
+      Architecture type to train with                                                   &
+      \texttt{model\_type}                                                              &
+      string                                                                            &
+      'UNET'                                                                            &
+      \tick                                                                               \\ \hline
+      Training configuration                                                            &
+      Training batch size                                                               &
+      \texttt{batch\_size}                                                              &
+      int                                                                               &
+      $1$                                                                               &
+      \tick                                                                               \\ \hline
+      Training configuration                                                            &
+      Initial optimizer learning rate                                                   &
+      \texttt{learning\_rate}                                                           &
+      float                                                                             &
+      $0.009$                                                                           &
+      \cross                                                                              \\ \hline
+      Training configuration                                                            &
+      Gradient accumulation steps count                                                 &
+      \texttt{grad\_batches}                                                            &
+      int                                                                               &
+      $1$                                                                               &
+      \tick                                                                               \\ \hline
+      Training configuration                                                            &
+      Training epochs count                                                             &
+      epochs                                                                            &
+      int                                                                               &
+      $100$                                                                             &
+      \cross                                                                              \\ \hline
+      Training configuration                                                            &
+      Learning rate finder flag                                                         &
+      \texttt{auto\_learning\_rate}                                                     &
+      bool                                                                              &
+      False                                                                             &
+      \cross                                                                              \\ \hline
+      Training configuration                                                            &
+      Early stopping flag                                                               &
+      \texttt{early\_stopping}                                                          &
+      bool                                                                              &
+      False                                                                             &
+      \cross                                                                              \\ \hline
+    \end{tabular}%
+  }
+  \caption[List of all hyperparameters]{List of all hyperparameters used in this project. The column \texttt{Default status} indicates whether the \texttt{Default value} will be used or not.}
+  \label{tab:hyperparameters}
+\end{table}
+
+\textbf{Checkpoint and Model Saving}
+\begin{itemize}
+  \item \texttt{save\_top\_k} allows saving the weights or configurations of the top $k$ performing models. For this project this value was changed according to the task at hand. For inference purposes, this valid was set to 1 which allows to make predictions on a model after training.
+  \item \texttt{checkpoint\_available} is not a part of the basic configuration for the presented method and is not utilized in this project.
+\end{itemize}
+
+\textbf{Data and Evaluation}
+\begin{itemize}
+  \item \texttt{num\_tests} generates up to $n$ visual testing results, which are logged in the \acf{wandb} graphical user interface. These results include $n$ samples of $x\in X$, their corresponding ground truth $y\in Y$, and the prediction $\hat{y}\in \hat{Y}$. These results are displayed as shown in \figref{wandb}.
+  \item \texttt{split\_ratio} determines the proportion of the validation set taken from the training set as $\frac{1}{\texttt{split\_ratio}}$. The value remains at 5 for all experiments.
+  \item \texttt{selection\_percentage} varies depending on the experiment. In particular, this parameter will change or be included within the sweep configuration for the ablation study, where results are evaluated on dataset subsets.
+  \item \texttt{average} defines the statistics or reduction applied when calculating a specific metric. The default value 'macro' means the metric is calculated over each class first and then taken as the average to output the final score. See \secref{subsec:segmentation_metrics} for further details.
+  \item \texttt{img\_size} indicates which image size is used. The default value of (256,256) is used for the Medaka fish and \ac{ISIC} dataset, while (512,512) is used for the \ac{IDRID}.
+\end{itemize}
+
+\textbf{Hardware and Infrastructure}
+\begin{itemize}
+  \item \texttt{gpu} is chosen based on current availability.
+\end{itemize}
+
+\textbf{Loss Function}
+\begin{itemize}
+  \item \texttt{tversky\_alpha, tversky\_beta} are chosen based on the optimal values as described in \cite{DBLP:journals/corr/SalehiEG17a}.
+  \item \texttt{focal\_alpha, focal\_gamma} are chosen based on the optimal values as described in \cite{lin2017focal}.
+  \item \texttt{hd\_alpha} is selected according to the suggested value described in \cite{8767031}.
+\end{itemize}
+
+\textbf{Merge strategies}
+\begin{itemize}
+  \item \texttt{ws\_1,ws\_2,ws\_3} are set to $[1,1,0.1]$ based on experimental findings, which indicate that boundary-based losses are typically much higher than region-based and distribution-based losses. Therefore, the weights for boundary-based losses are manually set to $0.1$ for weighted and normalized weighted sum strategies. As previously discussed, these high values in boundary-based outputs can be attributed to the distance transform. Particularly at the beginning of training, when segmented regions are still highly inaccurate, the losses from boundary-based types are extremely high and often unstable if trained as a single loss, making it difficult for them to converge. By setting the weight a factor of $10$ lower, the algorithm can focus more on distribution and region-based outputs to provide a robust starting point while still incorporating boundary information, albeit at a smaller scale.
+  \item \texttt{nws\_1,nw\_2,nws\_3} are set to $[1,1,0.1]$, similar to the weighted sum strategy.
+  \item \texttt{pbm\_alpha}, by design, must be larger than 1. This hyperparameter controls the function's slope, as illustrated in \figref{annealing}. The default value of this hyperparameter is set to $2$, which is applied in the basic sweep configuration. To further examine performance-based merging, an individual sweep is configured with values for $\alpha\in{1,2,3,4,5}$.
+  \item \texttt{pbm\_I} determines whether an ascending or descending strategy is employed, as detailed in \secref{sec:loss_merging}. Separate sweep configurations for ascending and descending strategies are used to compare their performance.
+  \item \texttt{time\_based\_merging} is a boolean flag with a default value of false. Individual sweep configurations are necessary to examine the performance of time-based merging strategies. Since this strategy can be applied independently to any other strategy, it will be applied to the top-k results to enhance performance even more.
+  \item \texttt{$tbm_{\alpha,\beta,\gamma,I_1,I_2,I_3}$} can be used to control the slope and ascending or descending property for time-based merging, as described in \secref{sec:loss_merging}. If \texttt{time\_based\_merging} is set to false, these parameters do not affect the use of other strategies.
+\end{itemize}
+
+\textbf{Model architecture}
+\begin{itemize}
+  \item \texttt{number\_layers} is set to the default value of $5$, following the recommendation from the original U-Net paper \cite{DBLP:journals/corr/RonnebergerFB15}.
+  \item \texttt{features\_start}, which represents the initial number of channels, is set to $64$. This default value is also suggested by the U-Net paper \cite{DBLP:journals/corr/RonnebergerFB15}.
+  \item \texttt{bilinear} is set to false. This flag determines the type of upsampling strategy used in the model. When set to false, transposed convolution is employed for upsampling, which has yielded good results in terms of computational efficiency \cite{8970918}.
+  \item \texttt{model\_type} indicates which type of network architecture is used. Here U-net will be used exclusively.
+\end{itemize}
+
+\textbf{Training configuration}
+\begin{itemize}
+  \item \texttt{batch\_size} is set to $1$ throughout the entire experiment. Although this choice results in higher computational costs, it allows for a more detailed examination of high-resolution data, especially in datasets with few samples and extremely challenging classification tasks.
+  \item \texttt{learning\_rate} is set to $0.009$ as a default value, derived from the average optimal values calculated for specific datasets with a learning rate finder
+  \item \texttt{auto\_learning\_rate} is enabled, particularly for difficult tasks such as the classification for the \acf{IDRID}.
+  \item \texttt{grad\_batches} is set to $1$ as the default value for the entire experiment.
+  \item \texttt{epochs} is set to $100$ for the Medaka fish \cite{10.1371/journal.pone.0263656} and \acf{ISIC}\cite{DBLP:journals/corr/abs-1710-05006} datasets, and to $150$ for the \ac{IDRID}.
+\end{itemize}
+
+
+\section{Sweep Configuration}
+\label{sec:sweep_configuration}
+\textbf{Baseline configuration}\newline
+The baseline configuration entails training six individual loss functions thoroughly detailed in \secref{subsec:segmentation_objectives}. Establishing a baseline is crucial for this project, as it enables comparison between the proposed merging strategies and the baseline performance. Since there are no hyperparameters to search for in this case, the baseline can be conveniently set up using the following sweep configuration.
+\begin{lstlisting}[style=mystyle,language=Python, numbers=none, caption={The baseline configuration comprises training six loss functions for each data selection percentage, leading to a total of 18 models to be trained.}]
+  #Loss functions and types
+  loss_dict = {
+      1: {'type': 'db', 'name': 'CE'},
+      2: {'type': 'db', 'name': 'Focal'},
+      3: {'type': 'rb', 'name': 'Tversky'},
+      4: {'type': 'rb', 'name': 'Dice'},
+      5: {'type': 'bb', 'name': 'HD'},
+      6: {'type': 'bb', 'name': 'Boundary'},
+  }
+  #Loss Combinations
+  loss_combinations = get_loss_combinations(loss_dict,triple=False,double=False,baseline=True)
+  #Configuration
+  sweep_configuration = {
+      'method': 'grid',
+      'name': 'baseline',
+      'metric': {'goal': 'minimize', 'name': 'val_loss'},
+      'parameters':
+      {   
+          'selection_percentage': {'values': [0.32, 0.64, 1]},
+          'loss': {'values': loss_combinations},
+      }
+  }
+\end{lstlisting}
+
+\textbf{Discrete configuration}\newline
+Considering the discrete number of combinations and strategies presented in \secref{sec:loss_merging}, a custom sweep configuration can be devised to iterate through all loss combinations and merge strategies from the averaging, static weighting, and extreme point types. This configuration encompasses parameters that do not require optimization. The subsequent sweep configuration setup results in a total of $20 \text{ losses} \cdot 6\text{ merge strategies} \cdot 3\text{dataset selections} = 360$ models generated from this discrete parameter space.
+
+\begin{lstlisting}[style=mystyle,language=Python, numbers=none, caption={The discrete sweep configuration setup is composed of a dictionary that includes six loss functions, along with their corresponding types. This dictionary is provided to the \texttt{get\_loss\_combinations} function, which generates a list of 20 double and triple loss combinations, as previously introduced in \ref{tab:loss_combinations}. Moreover, the configuration encompasses six merge strategies, excluding time-based and performance-based strategies. Both the loss combinations and merge strategies are then incorporated into the sweep configuration dictionary, which creates one run for each combination. The objective of this configuration is to minimize validation loss. It is important to note that this configuration does not have any specific hyperparameter set, creating $20\cdot 6 \cdot 3=360$ distinct models.}]
+  #Loss functions and types
+  loss_dict = {
+      1: {'type': 'db', 'name': 'CE'},
+      2: {'type': 'db', 'name': 'Focal'},
+      3: {'type': 'rb', 'name': 'Tversky'},
+      4: {'type': 'rb', 'name': 'Dice'},
+      5: {'type': 'bb', 'name': 'HD'},
+      6: {'type': 'bb', 'name': 'Boundary'},
+  }
+  #Loss Combinations
+  loss_combinations = get_loss_combinations(loss_dict,triple=True,double=True,baseline=False)
+  #Merge Strategies
+  merge_strategies =['max_strategy','min_strategy','harmonic','arithmetic','weighted_sum','normalized_weighted_sum']
+  #Configuration
+  sweep_configuration = {
+      'method': 'grid',
+      'name': 'discrete_configuration',
+      'metric': {'goal': 'minimize', 'name': 'val_loss'},
+      'parameters':
+      {   
+          'selection_percentage': {'values': [0.32, 0.64, 1]},
+          'strategy': {'values': merge_strategies},
+          'loss': {'values': loss_combinations},
+      }
+  }
+\end{lstlisting}
+
+\textbf{Continous configuration}\newline
+This type of setup is based on Hyperband, an early stopping technique for continuous hyperparameter optimization based on the Successive Halving algorithm. It is designed to allocate resources efficiently to the most promising configurations by adaptively allocating more resources to configurations that perform well in the early stages of training. The goal is to find the best configuration with a limited budget of resources. \acf{wandb} implements the algorithm as follows:
+\begin{enumerate}
+  \item \textbf{\emph{Initialization}}: Sample configurations from the search space.
+  \item \textbf{\emph{Dividing the resource budget}}: Divide the budget into brackets with different resource allocation strategies.
+  \item \textbf{\emph{Successive Halving}}: Within each bracket, start with multiple configurations, allocate resources, evaluate performance, discard poorly performing ones, and allocate more resources to the remaining ones. Repeat until one configuration is left.
+  \item \textbf{\emph{Hyperband iteration}}: Repeat steps 2-3 for several iterations, defined by \texttt{max\_iter}.
+  \item \textbf{\emph{Selection of the best configuration}}: Choose the configuration with the best performance after all iterations.
+\end{enumerate}
+For a more detailed description of this algorithm, refer to \cite{DBLP:journals/corr/LiJDRT16}.
+
+The following two setups contain two configurations that encompass performance-based and time-based merging strategies, including continuous hyperparameters to be searched for.
+
+\begin{lstlisting}[style=mystyle,language=Python,numbers=none,caption={The \texttt{Performance-based} configuration investigates 20 distinct loss function combinations alongside the performance-based merging strategy which involves incorporating a continuous search space. By utilizing a random selection approach within the Hyperband framework, the sweep configuration aims to identify an optimal set of hyperparameters effectively.}]
+  #Loss functions and types
+  loss_dict = {
+      1: {'type': 'db', 'name': 'CE'},
+      2: {'type': 'db', 'name': 'Focal'},
+      3: {'type': 'rb', 'name': 'Tversky'},
+      4: {'type': 'rb', 'name': 'Dice'},
+      5: {'type': 'bb', 'name': 'HD'},
+      6: {'type': 'bb', 'name': 'Boundary'},
+  }
+  #Loss Combinations
+  loss_combinations = get_loss_combinations(loss_dict,triple=True,double=True,baseline=False)
+  #Merge Strategies
+  merge_strategies=['performance_based_merging']
+  #Configuration
+  sweep_configuration = {
+      'method': 'random',
+      'name': 'continous_configuration',
+      'metric': {'goal': 'minimize', 'name': 'val_loss'},
+      'early_terminate': {'type': 'hyperband','max_iter': 150, 'eta':3, 's': 2},
+      'parameters':
+      {   
+          'selection_percentage': {'values': [0.32, 0.64, 1]},
+          'strategy': {'values': merge_strategies},
+          'loss': {'values': loss_combinations},
+          'pbm_I': {'min': 0.0, 'max': 1.0},
+          'pbm_alpha': {'min': 1.0, 'max': 10.0}
+      }
+  }
+\end{lstlisting}
+
+\begin{lstlisting}[style=mystyle,language=Python,numbers=none,caption={The \texttt{Time-based} configuration on the other hand is applied to all other merge strategies in combination with the 20 loss combinations as described in \chapref{chap:methodology}. As the parameters are also from a continuous space, the same Hyperband algorithm is used as described for the \texttt{Performance-based} configuration.}]
+  #Loss functions and types
+  loss_dict = {
+      1: {'type': 'db', 'name': 'CE'},
+      2: {'type': 'db', 'name': 'Focal'},
+      3: {'type': 'rb', 'name': 'Tversky'},
+      4: {'type': 'rb', 'name': 'Dice'},
+      5: {'type': 'bb', 'name': 'HD'},
+      6: {'type': 'bb', 'name': 'Boundary'},
+  }
+  #Loss Combinations
+  loss_combinations = get_loss_combinations(loss_dict,triple=True,double=True,baseline=False)
+  #Merge Strategies
+  merge_strategies=['max_strategy', 'min_strategy', 'arithmetic', 'harmonic', 'weighted_sum', 'normalized_weighted_sum','performance_based_merging']
+  #Configuration
+  self.sweep_configuration = {
+      'method': 'random',
+      'name': 'continous_configuration',
+      'metric': {'goal': 'minimize', 'name': 'val_loss'},
+      'early_terminate': {'type': 'hyperband','max_iter': 150,'s': 5},
+      'parameters':
+      {   
+          'selection_percentage': {'values': [0.32, 0.64, 1]},
+          'strategy': {'values': self.merge_strategies},
+          'loss': {'values': self.loss_combinations},
+          'pbm_I': {'min': 0.0, 'max': 1.0},
+          'pbm_alpha': {'min': 1.0, 'max': 10.0},
+          'tbm_alpha': {'min': 1.0, 'max': 10.0},
+          'tbm_beta': {'min': 1.0, 'max': 10.0},
+          'tbm_gamma': {'min': 1.0, 'max': 10.0},
+          'tbm_I_1': {'min': 0.0, 'max': 1.0},
+          'tbm_I_2': {'min': 0.0, 'max': 1.0},
+          'tbm_I_3': {'min': 0.0, 'max': 1.0},
+      }
+  }
+\end{lstlisting}

@@ -1,0 +1,59 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{llll|l|l|l|l|l|l|l|l|l|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Loss}} &
+    {\color[HTML]{FFFFFF} Selection \%} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|l|}{1}  & \multicolumn{1}{l|}{115} & \multicolumn{1}{l|}{FL,DL,BL} & 1.00 & PBM & 0.742 & 0.981 & 0.757 & 0.629 & 0.601 & 0.860 & 0.829 & PPV \\ \hline
+  \multicolumn{1}{|l|}{2}  & \multicolumn{1}{l|}{108} & \multicolumn{1}{l|}{FL,DL,BL} & 1.00 & PBM & 0.717 & 0.978 & 0.778 & 0.556 & 0.556 & 0.845 & 0.824 & PPV \\ \hline
+  \multicolumn{1}{|l|}{3}  & \multicolumn{1}{l|}{113} & \multicolumn{1}{l|}{FL,DL,BL} & 1.00 & PBM & 0.711 & 0.976 & 0.779 & 0.534 & 0.556 & 0.815 & 0.840 & TPR \\ \hline
+  \multicolumn{1}{|l|}{4}  & \multicolumn{1}{l|}{62}  & \multicolumn{1}{l|}{FL,DL,BL} & 1.00 & PBM & 0.696 & 0.974 & 0.644 & 0.539 & 0.628 & 0.773 & 0.859 & TPR \\ \hline
+  \multicolumn{1}{|l|}{5}  & \multicolumn{1}{l|}{128} & \multicolumn{1}{l|}{FL,DL,BL} & 1.00 & PBM & 0.693 & 0.980 & 0.760 & 0.399 & 0.632 & 0.799 & 0.814 & TPR \\ \hline
+  \multicolumn{1}{|l|}{6}  & \multicolumn{1}{l|}{110} & \multicolumn{1}{l|}{FL,DL,BL} & 1.00 & PBM & 0.649 & 0.974 & 0.605 & 0.456 & 0.561 & 0.757 & 0.816 & TPR \\ \hline
+  \multicolumn{1}{|l|}{7}  & \multicolumn{1}{l|}{74}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.64 & PBM & 0.769 & 0.982 & 0.790 & 0.666 & 0.637 & 0.877 & 0.860 & PPV \\ \hline
+  \multicolumn{1}{|l|}{8}  & \multicolumn{1}{l|}{45}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.64 & PBM & 0.761 & 0.982 & 0.780 & 0.584 & 0.696 & 0.862 & 0.850 & PPV \\ \hline
+  \multicolumn{1}{|l|}{9}  & \multicolumn{1}{l|}{68}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.64 & PBM & 0.759 & 0.983 & 0.799 & 0.653 & 0.602 & 0.900 & 0.812 & PPV \\ \hline
+  \multicolumn{1}{|l|}{10} & \multicolumn{1}{l|}{74}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.64 & PBM & 0.725 & 0.979 & 0.772 & 0.555 & 0.594 & 0.872 & 0.807 & PPV \\ \hline
+  \multicolumn{1}{|l|}{11} & \multicolumn{1}{l|}{76}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.64 & PBM & 0.709 & 0.975 & 0.630 & 0.578 & 0.654 & 0.814 & 0.867 & TPR \\ \hline
+  \multicolumn{1}{|l|}{12} & \multicolumn{1}{l|}{61}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.64 & PBM & 0.707 & 0.980 & 0.705 & 0.564 & 0.580 & 0.820 & 0.823 & TPR \\ \hline
+  \multicolumn{1}{|l|}{13} & \multicolumn{1}{l|}{14}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.32 & PBM & 0.712 & 0.979 & 0.667 & 0.561 & 0.642 & 0.825 & 0.823 & PPV \\ \hline
+  \multicolumn{1}{|l|}{14} & \multicolumn{1}{l|}{43}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.32 & PBM & 0.699 & 0.979 & 0.695 & 0.592 & 0.531 & 0.877 & 0.767 & PPV \\ \hline
+  \multicolumn{1}{|l|}{15} & \multicolumn{1}{l|}{41}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.32 & PBM & 0.694 & 0.975 & 0.728 & 0.638 & 0.434 & 0.841 & 0.802 & PPV \\ \hline
+  \multicolumn{1}{|l|}{16} & \multicolumn{1}{l|}{44}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.32 & PBM & 0.688 & 0.978 & 0.762 & 0.498 & 0.512 & 0.799 & 0.792 & PPV \\ \hline
+  \multicolumn{1}{|l|}{17} & \multicolumn{1}{l|}{14}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.32 & PBM & 0.677 & 0.978 & 0.742 & 0.443 & 0.546 & 0.800 & 0.812 & PPV \\ \hline
+  \multicolumn{1}{|l|}{18} & \multicolumn{1}{l|}{16}  & \multicolumn{1}{l|}{FL,DL,BL} & 0.32 & PBM & 0.407 & 0.969 & 0.219 & 0.017 & 0.421 & 0.562 & 0.488 & PPV \\ \hline
+   &
+     &
+     &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.695}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.978}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.701}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.526}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.577}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.816}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.805}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{5-13} 
+  \end{tabular}%
+  }
+  \caption[Specific Combination Medaka - PBM]{Table lists six models for each selection percentage trained repetitively on the loss combination \ac{FL}, \ac{DL} and \ac{BL} using the arithmetic averaging (AVG) strategy for merging. These results serve as part of a final comparison against baseline results providing an identical iteration number. The columns $IoU_0,\hdots,IoU_3$ represent the four classes, Background, Bulbus, Atrium and Ventricle.  The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:top_six_FLDLBL_medaka}
+  \end{table}

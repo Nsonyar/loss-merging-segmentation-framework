@@ -1,0 +1,29 @@
+\NeedsTeXFormat{LaTeX2e}[2017/01/01]
+\ProvidesPackage{./styles/rwu/rwudefs}[2019/11/26 RWU logo and color definitions]
+\ProvidesFile{./styles/rwu/rwulogo.eps}[2019/11/26 RWU logo as Encapsulated PostScipt file]
+
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+
+\definecolor{rwuviolet}{RGB}{102, 56, 182}%6638B6 (OpticDisc (3))
+\definecolor{rwuvioletlight}{RGB}{155, 125, 212}% #9B7DD4 (Bulbus) (Melanoma)
+\definecolor{rwucyan}{RGB}{0, 169, 206}% #00A9CE (Ventricle)
+\definecolor{rwucyanlight}{RGB}{5, 195, 222}% #32C3DE
+\definecolor{rwucyan40}{RGB}{153, 221, 253}% #99DDFD (Haemorrhages (4)) (Atrium)
+\definecolor{hardexudates}{RGB}{255,0,157}%ff009d (Hard Exudates (1))
+\definecolor{microaneurysms}{RGB}{0,255,175} % #00ffaf (microaneurysms (2)) 
+
+\definecolor{kitgreen}{RGB}{84, 158, 138}%#549E8A
+
+\definecolor{black}{RGB}{0,0,0}%k#000000
+
+
+\newcommand{\rwulogo}[1][width=5.12cm]{\includegraphics[#1]{./styles/rwu/rwulogo.eps}}
+
+\endinput
+
+% \textbf{\textcolor{rwucyan40}{Haemorrhages}}
+% \textbf{\textcolor{hardexudates}{Hard Exudates}}
+% \textbf{\textcolor{microaneurysms}{Microaneurysms}}
+% \textbf{\textcolor{rwuviolet}{Optic Disc}}
+

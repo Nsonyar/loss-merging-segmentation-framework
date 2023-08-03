@@ -1,0 +1,353 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{ccc|l|l|l|l|l|l|l|l|l|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    {\color[HTML]{FFFFFF} Loss type} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} Iou} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} IoU 4} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \multicolumn{1}{c|}{37} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    CE &
+    0.367 &
+    0.961 &
+    0.002 &
+    0.234 &
+    0.002 &
+    0.634 &
+    0.520 &
+    0.435 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \multicolumn{1}{c|}{44} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    CE &
+    0.364 &
+    0.954 &
+    0.002 &
+    0.290 &
+    0.011 &
+    0.561 &
+    0.565 &
+    0.429 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \multicolumn{1}{c|}{40} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    CE &
+    0.348 &
+    0.958 &
+    0.042 &
+    0.289 &
+    0.000 &
+    0.449 &
+    0.525 &
+    0.408 &
+    PPV \\ \hline
+   &
+     &
+    {\color[HTML]{FFFFFF} } &
+    {\color[HTML]{000000} \textit{\textbf{CE Result}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.359}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.958}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.015}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.271}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.004}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.548}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.537}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.424}}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \multicolumn{1}{c|}{35} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.361 &
+    0.949 &
+    0.003 &
+    0.289 &
+    0.027 &
+    0.539 &
+    0.602 &
+    0.431 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \multicolumn{1}{c|}{42} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.301 &
+    0.940 &
+    0.002 &
+    0.258 &
+    0.023 &
+    0.282 &
+    0.522 &
+    0.374 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \multicolumn{1}{c|}{35} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.300 &
+    0.948 &
+    0.003 &
+    0.255 &
+    0.041 &
+    0.253 &
+    0.580 &
+    0.381 &
+    PPV \\ \hline
+   &
+     &
+     &
+    \textit{\textbf{FL Result}} &
+    \textit{\textbf{0.321}} &
+    \textit{\textbf{0.946}} &
+    \textit{\textbf{0.002}} &
+    \textit{\textbf{0.267}} &
+    \textit{\textbf{0.031}} &
+    \textit{\textbf{0.358}} &
+    \textit{\textbf{0.568}} &
+    \textit{\textbf{0.396}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \multicolumn{1}{c|}{36} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    FL &
+    0.343 &
+    0.896 &
+    0.103 &
+    0.276 &
+    0.115 &
+    0.324 &
+    0.591 &
+    0.446 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{8} &
+    \multicolumn{1}{c|}{44} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    FL &
+    0.282 &
+    0.941 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.470 &
+    0.342 &
+    0.336 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{9} &
+    \multicolumn{1}{c|}{45} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    FL &
+    0.276 &
+    0.940 &
+    0.017 &
+    0.240 &
+    0.053 &
+    0.131 &
+    0.501 &
+    0.358 &
+    PPV \\ \hline
+   &
+     &
+    {\color[HTML]{FFFFFF} } &
+    \textit{\textbf{FL Result}} &
+    \textit{\textbf{0.300}} &
+    \textit{\textbf{0.926}} &
+    \textit{\textbf{0.040}} &
+    \textit{\textbf{0.172}} &
+    \textit{\textbf{0.056}} &
+    \textit{\textbf{0.308}} &
+    \textit{\textbf{0.478}} &
+    \textit{\textbf{0.380}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{10} &
+    \multicolumn{1}{c|}{27} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    0.302 &
+    0.969 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.539 &
+    0.352 &
+    0.332 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{11} &
+    \multicolumn{1}{c|}{22} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    0.228 &
+    0.952 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.188 &
+    0.262 &
+    0.269 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{12} &
+    \multicolumn{1}{c|}{26} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    0.225 &
+    0.949 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.177 &
+    0.248 &
+    0.273 &
+    TPR \\ \hline
+   &
+     &
+    {\color[HTML]{FFFFFF} } &
+    \textit{\textbf{TL Result}} &
+    \textit{\textbf{0.252}} &
+    \textit{\textbf{0.956}} &
+    \textit{\textbf{0.000}} &
+    \textit{\textbf{0.000}} &
+    \textit{\textbf{0.000}} &
+    \textit{\textbf{0.301}} &
+    \textit{\textbf{0.287}} &
+    \textit{\textbf{0.292}} &
+    \textbf{TPR} \\ \hline
+  \multicolumn{1}{|c|}{13} &
+    \multicolumn{1}{c|}{91} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.283 &
+    0.940 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.477 &
+    0.343 &
+    0.340 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{14} &
+    \multicolumn{1}{c|}{89} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.270 &
+    0.948 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.402 &
+    0.342 &
+    0.319 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{15} &
+    \multicolumn{1}{c|}{95} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.255 &
+    0.951 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.326 &
+    0.302 &
+    0.301 &
+    PPV \\ \hline
+   &
+     &
+    {\color[HTML]{FFFFFF} } &
+    \textit{\textbf{HL Result}} &
+    \textit{\textbf{0.270}} &
+    \textit{\textbf{0.946}} &
+    \textit{\textbf{0.000}} &
+    \textit{\textbf{0.000}} &
+    \textit{\textbf{0.000}} &
+    \textit{\textbf{0.402}} &
+    \textit{\textbf{0.329}} &
+    \textit{\textbf{0.320}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{16} &
+    \multicolumn{1}{c|}{64} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.075 &
+    0.349 &
+    0.007 &
+    0.007 &
+    0.001 &
+    0.011 &
+    0.199 &
+    0.168 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{17} &
+    \multicolumn{1}{c|}{65} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.038 &
+    0.171 &
+    0.012 &
+    0.006 &
+    0.001 &
+    0.000 &
+    0.187 &
+    0.177 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{18} &
+    \multicolumn{1}{c|}{69} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.024 &
+    0.089 &
+    0.007 &
+    0.013 &
+    0.001 &
+    0.009 &
+    0.202 &
+    0.216 &
+    TPR \\ \hline
+   &
+     &
+     &
+    \textit{\textbf{BL Result}} &
+    \textit{\textbf{0.046}} &
+    \textit{\textbf{0.203}} &
+    \textit{\textbf{0.009}} &
+    \textit{\textbf{0.009}} &
+    \textit{\textbf{0.001}} &
+    \textit{\textbf{0.007}} &
+    \textit{\textbf{0.196}} &
+    \textit{\textbf{0.187}} &
+    \textbf{PPV} \\ \cline{4-13} 
+   &
+     &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.258}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.823}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.011}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.120}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.015}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.321}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.399}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.333}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{PPV}} \\ \cline{4-13} 
+  \end{tabular}%
+  }
+  \caption[Top baseline results for the IDRID]{The table presents the average values of various metrics for the top 3 baseline models corresponding to each loss function. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:baseline_idrid_long}
+  \end{table}

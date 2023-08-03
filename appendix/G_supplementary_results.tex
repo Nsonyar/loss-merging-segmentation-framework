@@ -1,0 +1,170 @@
+\chapter{Supplementary Results}
+\label{chap:supplementary_results}
+This chapter offers an extensive analysis of the top-performing models across various datasets. It is a valuable supplement to the main chapter and a critical resource for further discussion and exploration.
+
+For the \acf{MFD} and \acf{SLD}, the baseline results encompass the top three models for each loss function and selection percentage, equating to nine models for each loss type. In contrast, all models for the \acf{IDRID} dataset were trained on the full dataset. As such, the number of top models is three per loss type.
+
+Discrete results include the top-performing models categorized by loss combination and merge strategy. Double and triple loss combinations are presented separately. Similar to the baseline results, the top three models for each loss and selection percentage are presented, resulting in nine models for each loss or merge strategy concerning the \ac{MFD} and \ac{SLD}. However, only three models are listed for the \ac{IDRID} dataset.
+
+The continuous results present the top three performers across all datasets when available. However, it is essential to note that the hyperband search algorithm may have eliminated certain loss combinations or merge strategies, as mentioned in the \secref{sec:sweep_configuration}, which might result in fewer combinations available for review.
+
+The specific results contain trainings from distinct, promising combinations trained repetitively to reaffirm the validity by providing an equal iteration count as the baseline per loss which was not feasible for the entire range of discrete and continuous combinations due to lack of computational resources.
+
+The section on PPV vs. TPR provides two distinct maps for each dataset, graphically representing the prevalence of \ac{PPV} and \ac{TPR} for every combination of loss and merge strategy. A higher numerical value in these maps signifies a more significant number of models with a superior \ac{TPR}. Conversely, values below zero indicate a prevalence of models with a superior \ac{PPV}. These maps effectively visualize the trade-off between \ac{PPV} and \ac{TPR} across different model configurations.
+
+In addition to the top-performing models, this chapter presents supplementary results from the ablation study discussed in \secref{sec:ablation_results}, which includes heatmaps illustrating results across different dataset sizes. Since only the \ac{MFD} and \ac{SLD} were trained using data subsets, the corresponding sections will be limited to these two datasets.
+
+\newpage
+%----------------------------------------------------------------------------------------%
+%---------------------------------------Medaka fish--------------------------------------%
+%----------------------------------------------------------------------------------------%
+\section{Medaka fish}
+\label{sec:medaka_supplementary}
+\subsection{Baseline}
+\label{subsec:baseline_medaka}
+\input{tables/baseline_medaka_long}
+\newpage
+
+\subsection{Discrete}
+\label{subsec:discrete_medaka}
+\subsubsection*{Loss Combination}
+\input{tables/loss_combination_results_medaka_double_long}
+\input{tables/loss_combination_results_medaka_triple_long}
+\subsubsection*{Merge Strategy}
+\input{tables/merge_strategy_results_medaka_double_long}
+\input{tables/merge_strategy_results_medaka_triple_long}
+\newpage
+
+\subsection{Continuous}
+\label{subsec:continous_medaka}
+\input{tables/continous_loss_combination_medaka_double_long}
+\input{tables/continous_loss_combination_medaka_triple_long}
+\newpage
+
+\subsection{Specific}
+\label{subsec:specific_combination_medaka}
+\input{tables/top_six_FLDLBL_medaka}
+\newpage
+
+\subsection{PPV vs. TPR}
+\begin{figure}[H]%[htbp]
+    \centering
+    \subfigure[Distribution of PPV vs. TPR for double losses]{\includegraphics[width=\imgWidthcustom]{images/ppv_tpr_heatmap_double_medaka.png}}
+    \subfigure[Distribution of PPV vs. TPR for triple losses]{\includegraphics[width=\imgWidthcustom]{images/ppv_tpr_heatmap_triple_medaka.png}}
+    \caption[Distribution of PPV vs. TPR Values]{Heatmaps visualizing the relative prevalence as a difference map of PPV and TPR across various loss combinations and merge strategies. Each cell represents a unique combination. Positive values indicate a predominance of TPR, while negative values signify a predominance of PPV.}
+    \label{ppv_vs_tpr_medaka}
+\end{figure}
+\newpage
+
+\subsection{Ablation study}
+\begin{figure}[H]%[htbp]
+    \centering
+    \subfigure[Double Loss Combination for 100 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(1.0, 2)_ablation_summary_medaka.png}}
+    \subfigure[Triple Loss Combination for 100 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(1.0, 3)_ablation_summary_medaka.png}}
+    \subfigure[Double Loss Combination for 64 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(0.64, 2)_ablation_summary_medaka.png}}
+    \subfigure[Triple Loss Combination for 64 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(0.64, 3)_ablation_summary_medaka.png}}
+    \subfigure[Double Loss Combination for 32 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(0.32, 2)_ablation_summary_medaka.png}}
+    \subfigure[Triple Loss Combination for 32 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(0.32, 3)_ablation_summary_medaka.png}}
+    \caption[Overall results for different dataset sizes]{Overall results generated from different dataset sizes. The left column (a,c,e) illustrates results from double loss combinations, while the right column (b,d,f) depicts results from triple loss combinations.}
+    \label{ablation_medaka_heatmaps}
+\end{figure}
+\newpage
+
+%----------------------------------------------------------------------------------------%
+%---------------------------------------Skin lesion--------------------------------------%
+%----------------------------------------------------------------------------------------%
+\section{Skin lesion}
+\label{sec:supplementary_skin_lesion}
+\subsection{Baseline}
+\label{subsec:baseline_skin_lesion}
+\input{tables/baseline_skin_lesion_long}
+\newpage
+
+\subsection{Discrete}
+\label{subsec:discrete_skin_lesion}
+
+\subsubsection*{Loss Combination}
+\input{tables/loss_combination_results_melanoma_double_long}
+\input{tables/loss_combination_results_melanoma_triple_long}
+\subsubsection*{Merge Strategy}
+\input{tables/merge_strategy_results_melanoma_double_long}
+\input{tables/merge_strategy_results_melanoma_triple_long}
+\newpage
+
+\subsection{Continuous}
+\label{subsec:continous_melanoma}
+\input{tables/continous_loss_combination_melanoma_double_long}
+\input{tables/continous_loss_combination_melanoma_triple_long}
+\newpage
+
+\subsection{Specific}
+\label{subsec:specific_combination_melanoma}
+\input{tables/top_six_CETL_melanoma}
+\newpage
+
+\subsection{PPV vs. TPR}
+\begin{figure}[H]%[htbp]
+    \centering
+    \subfigure[Distribution of PPV vs. TPR for double losses]{\includegraphics[width=\imgWidthcustom]{images/ppv_tpr_heatmap_double_melanoma.png}}
+    \subfigure[Distribution of PPV vs. TPR for triple losses]{\includegraphics[width=\imgWidthcustom]{images/ppv_tpr_heatmap_triple_melanoma.png}}
+    \caption[Distribution of PPV vs. TPR Values]{Heatmaps visualizing the relative prevalence as a difference map of PPV and TPR across various loss combinations and merge strategies. Each cell represents a unique combination. Positive values indicate a predominance of TPR, while negative values signify a predominance of PPV.}
+    \label{ppv_vs_tpr_melanoma}
+\end{figure}
+\newpage
+
+\subsection{Ablation study}
+\begin{figure}[H]%[htbp]
+    \centering
+    \subfigure[Double Loss Combination for 100 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(1.0, 2)_ablation_summary_melanoma.png}}
+    \subfigure[Triple Loss Combination for 100 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(1.0, 3)_ablation_summary_melanoma.png}}
+    \subfigure[Double Loss Combination for 64 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(0.64, 2)_ablation_summary_melanoma.png}}
+    \subfigure[Triple Loss Combination for 64 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(0.64, 3)_ablation_summary_melanoma.png}}
+    \subfigure[Double Loss Combination for 32 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(0.32, 2)_ablation_summary_melanoma.png}}
+    \subfigure[Triple Loss Combination for 32 \% Data Utilization]{\includegraphics[width=\imgWidthcustom]{images/(0.32, 3)_ablation_summary_melanoma.png}}
+    \caption[Overall results for different dataset sizes]{Overall results generated from different dataset sizes. The left column (a,c,e) illustrates results from double loss combinations, while the right column (b,d,f) depicts results from triple loss combinations.}
+    \label{ablation_melanoma_heatmaps}
+\end{figure}
+\newpage
+
+
+%----------------------------------------------------------------------------------------%
+%---------------------------------------IDRID--------------------------------------------%
+%----------------------------------------------------------------------------------------%
+\section{Idrid}
+\label{sec:supplementary_idrid}
+\subsection{Baseline}
+\label{subsec:baseline_idrid}
+\input{tables/baseline_idrid_long}
+\newpage
+
+\subsection{Discrete}
+\label{subsec:discrete_idrid}
+\subsubsection*{Loss Combination}
+\input{tables/loss_combination_results_idrid_double_long}
+\input{tables/loss_combination_results_idrid_triple_long}
+\subsubsection*{Merge Strategy}
+\input{tables/merge_strategy_results_idrid_double_long}
+\input{tables/merge_strategy_results_idrid_triple_long}
+\newpage
+
+\subsection{Continuous}
+\label{subsec:continous_idrid}
+\input{tables/continous_loss_combination_idrid_double_long}
+\input{tables/continous_loss_combination_idrid_triple_long}
+\newpage
+
+\subsection{Specific}
+\label{subsec:specific_combination_idrid}
+\input{tables/top_six_CEDL_idrid}
+\newpage
+
+\subsection{PPV vs. TPR}
+\label{subsec:ppv_vs_tpr}
+\begin{figure}[H]%[htbp]
+    \centering
+    \subfigure[Distribution of PPV vs. TPR for double losses]{\includegraphics[width=\imgWidthcustom]{images/ppv_tpr_heatmap_double_idrid.png}}
+    \subfigure[Distribution of PPV vs. TPR for triple losses]{\includegraphics[width=\imgWidthcustom]{images/ppv_tpr_heatmap_triple_idrid.png}}
+    \caption[Distribution of PPV vs. TPR Values]{Heatmaps visualizing the relative prevalence as a difference map of PPV and TPR across various loss combinations and merge strategies. Each cell represents a unique combination. Positive values indicate a predominance of TPR, while negative values signify a predominance of PPV.}
+    \label{ppv_vs_tpr_idrid}
+\end{figure}
+\newpage

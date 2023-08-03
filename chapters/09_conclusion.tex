@@ -1,0 +1,15 @@
+\chapter{Conclusion}
+\label{chap:conclusion}
+This study introduced a unified framework for loss merging to enhance semantic segmentation. Central to this framework are eight unique loss merging strategies that merge six loss functions in various double and triple combinations. The framework, integrated with the U-Net architecture, offers multiple configurations for training diverse models, which were precisely evaluated against baseline models utilizing single-loss functions.
+
+An exhaustive analysis of the results from several perspectives highlighted the potential to boost overall performance for all datasets studied by merging specific types of losses. It was demonstrated that an extensive array of loss combinations and merge strategies surpassed the performance of models trained with single losses. This was particularly evident in the promising results of strategies employing the normalized weighted sum (NWS) and averaging (AVG). Additionally, exceptional performance was observed through a distinct, performance-based method when hyperparameters were calibrated correctly.
+
+However, the increased computational resource demand serves as a notable trade-off, as models trained using loss combinations necessitate up to twice the computational time relative to baseline training with a single loss function in addition to the set of combinations which can be high if many losses and merge strategies are used.
+
+Despite this notable disadvantage, the ablation study showed that the proposed framework could be efficiently deployed on a subset of data, allowing researchers to achieve comparable insights with less training data, thus effectively compromising cost and insight acquisition.
+
+Though the framework was applied to six loss functions and eight merging strategies, its potential is not restricted to these parameters. It is adjustable to incorporate an arbitrary number of functions or strategies, thereby paving the way for formulating novel types of losses in future studies.
+
+Additional avenues for future exploration include extending the framework to further losses and datasets, testing a more refined data subset with even fewer samples or using only a fraction of the number of epochs, to extend the ablation study, or adjusting the model to adapt different batch sizes. Additionally, the time-based merging strategy might be worth evaluating, as presented in \secref{sec:merge_strategies}, which was excluded due to its high computational demand.
+
+Such proposed modifications or extended research might increase the understanding of this area and enhance the practical application of the presented framework.

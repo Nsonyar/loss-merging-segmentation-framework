@@ -1,0 +1,123 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cl|l|l|l|l|l|l|l|l|l|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 0}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 1}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 2}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 3}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 4}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} PPV}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TPR}} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{\textbf{1}} &
+    \textit{\textbf{152}} &
+    \textit{\textbf{AVG}} &
+    \textit{\textbf{0.388}} &
+    \textit{\textbf{0.947}} &
+    \textit{\textbf{0.141}} &
+    \textit{\textbf{0.299}} &
+    \textit{\textbf{0.160}} &
+    \textit{\textbf{0.394}} &
+    \textit{\textbf{0.625}} &
+    \textit{\textbf{0.500}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \textit{246} &
+    \textit{HARMONIC} &
+    \textit{0.319} &
+    \textit{0.931} &
+    \textit{0.006} &
+    \textit{0.199} &
+    \textit{0.003} &
+    \textit{0.456} &
+    \textit{0.487} &
+    \textit{0.403} &
+    \textit{PPV} \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \textit{189} &
+    \textit{MAX} &
+    \textit{0.303} &
+    \textit{0.912} &
+    \textit{0.044} &
+    \textit{0.247} &
+    \textit{0.046} &
+    \textit{0.265} &
+    \textit{0.470} &
+    \textit{0.414} &
+    \textit{PPV} \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \textit{206} &
+    \textit{MIN} &
+    \textit{0.323} &
+    \textit{0.949} &
+    \textit{0.002} &
+    \textit{0.266} &
+    \textit{0.024} &
+    \textit{0.376} &
+    \textit{0.540} &
+    \textit{0.406} &
+    \textit{PPV} \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \textit{200} &
+    \textit{NWS} &
+    \textit{0.357} &
+    \textit{0.945} &
+    \textit{0.129} &
+    \textit{0.265} &
+    \textit{0.157} &
+    \textit{0.287} &
+    \textit{0.613} &
+    \textit{0.474} &
+    \textit{PPV} \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \textit{131} &
+    \textit{PBM} &
+    \textit{0.380} &
+    \textit{0.941} &
+    \textit{0.107} &
+    \textit{0.308} &
+    \textit{0.069} &
+    \textit{0.473} &
+    \textit{0.590} &
+    \textit{0.486} &
+    \textit{PPV} \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \textit{221} &
+    \textit{WS} &
+    \textit{0.362} &
+    \textit{0.925} &
+    \textit{0.119} &
+    \textit{0.282} &
+    \textit{0.128} &
+    \textit{0.357} &
+    \textit{0.592} &
+    \textit{0.472} &
+    \textit{PPV} \\ \hline
+   &
+    \textit{\textbf{}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.347}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.935}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.078}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.266}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.084}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.372}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.560}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.451}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{3-12} 
+  \end{tabular}%
+  }
+  \caption{Table represents the average for the top 3 triple loss combination results per merge strategy. The corresponding table with all models listed individually, can be viewed in \secref{subsubsec:merge_strategy_results_idrid_triple_long_v2}. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:merge_strategy_results_idrid_triple_short_v2}
+  \end{table}

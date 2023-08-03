@@ -1,0 +1,103 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|l|l|l|l|l|l|l|l|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    {\color[HTML]{FFFFFF} Loss type} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    CE &
+    0.614 &
+    0.975 &
+    0.583 &
+    0.517 &
+    0.383 &
+    0.742 &
+    0.717 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.655 &
+    0.975 &
+    0.729 &
+    0.565 &
+    0.350 &
+    0.798 &
+    0.760 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    0.651 &
+    0.969 &
+    0.657 &
+    0.506 &
+    0.473 &
+    0.748 &
+    0.801 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    0.647 &
+    0.977 &
+    0.747 &
+    0.417 &
+    0.449 &
+    0.743 &
+    0.729 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{\textit{\textbf{5}}} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} \textit{\textbf{BB}}} &
+    \textit{\textbf{HL\textsubscript{1}}} &
+    \textit{\textbf{0.709}} &
+    \textit{\textbf{0.979}} &
+    \textit{\textbf{0.562}} &
+    \textit{\textbf{0.752}} &
+    \textit{\textbf{0.546}} &
+    \textit{\textbf{0.869}} &
+    \textit{\textbf{0.778}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.078 &
+    0.265 &
+    0.018 &
+    0.011 &
+    0.019 &
+    0.250 &
+    0.242 &
+    PPV \\ \hline
+   &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.559}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.857}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.549}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.461}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.370}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.692}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.671}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{3-11} 
+  \end{tabular}%
+  }
+  \caption{The table presents a summary of the average values of various metrics for six baseline models trained for each loss function and each selection percentage. The total number of models trained for this baseline result is 18. The columns $IoU_0,\hdots,IoU_3$ represent the four classes, Background, Bublus, Atriums and Ventricle. The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:baseline_medaka_short_18}
+  \end{table}

@@ -1,0 +1,99 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{l|cccc|cccc|cccc|l}
+  \cline{2-13}
+   &
+    \multicolumn{4}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} \textbf{DB}}} &
+    \multicolumn{4}{c|}{\cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} \textbf{RB}}} &
+    \multicolumn{4}{c|}{\cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} \textbf{BB}}} &
+     \\ \cline{2-13}
+   &
+    \multicolumn{2}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} CE}} &
+    \multicolumn{2}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} FL}} &
+    \multicolumn{2}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} DL}} &
+    \multicolumn{2}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TL}} &
+    \multicolumn{2}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} BL}} &
+    \multicolumn{2}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} HL}} &
+    \multicolumn{1}{c}{} \\ \cline{2-14} 
+   &
+    \multicolumn{1}{c|}{$l_1$} &
+    \multicolumn{1}{c|}{$l_2$} &
+    \multicolumn{1}{c|}{$l_1$} &
+    $l_2$ &
+    \multicolumn{1}{c|}{$l_1$} &
+    \multicolumn{1}{c|}{$l_2$} &
+    \multicolumn{1}{c|}{$l_1$} &
+    $l_2$ &
+    \multicolumn{1}{c|}{$l_1$} &
+    \multicolumn{1}{c|}{$l_2$} &
+    \multicolumn{1}{c|}{$l_1$} &
+    $l_2$ &
+    \multicolumn{1}{c|}{Reference} \\ \hline
+  \multicolumn{1}{|l|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} Distance Insensitivity}} &
+    \multicolumn{1}{c|}{8.16} &
+    \multicolumn{1}{c|}{8.16} &
+    \multicolumn{1}{c|}{8.15} &
+    8.15 &
+    \multicolumn{1}{c|}{1.00} &
+    \multicolumn{1}{c|}{1.00} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.67} &
+    \cellcolor[HTML]{FFFFFF}0.67 &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}{\ul 0.04}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}{\ul 0.08}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}{\ul 0.15}} &
+    \cellcolor[HTML]{FFFFFF}{\ul 0.39} &
+    \multicolumn{1}{l|}{\figref{dice_limit_1}} \\ \hline
+  \multicolumn{1}{|l|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} Boundary insensitivity}} &
+    \multicolumn{1}{c|}{6.36} &
+    \multicolumn{1}{c|}{6.36} &
+    \multicolumn{1}{c|}{6.35} &
+    6.35 &
+    \multicolumn{1}{c|}{0.40} &
+    \multicolumn{1}{c|}{0.40} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.33} &
+    \cellcolor[HTML]{FFFFFF}0.33 &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.04} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.04} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}{\ul 0.15}} &
+    \cellcolor[HTML]{FFFFFF}{\ul 0.18} &
+    \multicolumn{1}{l|}{\figref{dice_limit_2}} \\ \hline
+  \multicolumn{1}{|l|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} Region-size sensitivity}} &
+    \multicolumn{1}{c|}{0.32} &
+    \multicolumn{1}{c|}{1.68} &
+    \multicolumn{1}{c|}{0.32} &
+    1.68 &
+    \multicolumn{1}{c|}{0.03} &
+    \multicolumn{1}{c|}{0.14} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.04} &
+    \cellcolor[HTML]{FFFFFF}0.15 &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}{\ul 0.01}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}{\ul 0.01}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}{\ul 0.04}} &
+    \cellcolor[HTML]{FFFFFF}{\ul 0.04} &
+    \multicolumn{1}{l|}{\figref{dice_limit_3}} \\ \hline
+  \multicolumn{1}{|l|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} FP / FN weight insensitivity}} &
+    \multicolumn{1}{c|}{1.68} &
+    \multicolumn{1}{c|}{1.68} &
+    \multicolumn{1}{c|}{1.68} &
+    1.68 &
+    \multicolumn{1}{c|}{0.14} &
+    \multicolumn{1}{c|}{0.14} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}{\ul 0.07}} &
+    \cellcolor[HTML]{FFFFFF}{\ul 0.14} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.01} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.01} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.04} &
+    \cellcolor[HTML]{FFFFFF}0.04 &
+    \multicolumn{1}{l|}{\figref{dice_limit_4}} \\ \hline
+  \end{tabular}%
+  }
+  \caption{Results demonstrating limitation no. 1 to 4 for six loss functions quantitatively.}
+  \label{tab:limitation_quantitative_results}
+  \end{table}

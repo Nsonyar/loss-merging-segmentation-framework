@@ -1,0 +1,597 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{ccc|l|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    {\color[HTML]{FFFFFF} Loss type} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} selection \%} &
+    {\color[HTML]{FFFFFF} Iou} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \multicolumn{1}{c|}{55} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    \textit{CE} &
+    0.64 &
+    \textit{0.667} &
+    \textit{0.812} &
+    \textit{0.824} &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \multicolumn{1}{c|}{29} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    \textit{CE} &
+    0.32 &
+    \textit{0.640} &
+    \textit{0.780} &
+    \textit{0.819} &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \multicolumn{1}{c|}{29} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    \textit{CE} &
+    0.32 &
+    \textit{0.626} &
+    \textit{0.807} &
+    \textit{0.752} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \multicolumn{1}{c|}{29} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    \textit{CE} &
+    0.32 &
+    \textit{0.584} &
+    \textit{0.745} &
+    \textit{0.699} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \multicolumn{1}{c|}{63} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    \textit{CE} &
+    0.64 &
+    \textit{0.580} &
+    \textit{0.752} &
+    \textit{0.704} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \multicolumn{1}{c|}{83} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    \textit{CE} &
+    1.00 &
+    \textit{0.532} &
+    \textit{0.753} &
+    \textit{0.670} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \multicolumn{1}{c|}{97} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    \textit{CE} &
+    1.00 &
+    \textit{0.528} &
+    \textit{0.769} &
+    \textit{0.641} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{8} &
+    \multicolumn{1}{c|}{55} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    CE &
+    0.64 &
+    0.528 &
+    0.753 &
+    0.643 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{9} &
+    \multicolumn{1}{c|}{83} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    CE &
+    1.00 &
+    0.500 &
+    0.738 &
+    0.611 &
+    PPV \\ \hline
+   &
+    \textit{} &
+    {\color[HTML]{FFFFFF} \textbf{}} &
+    \textit{\textbf{CE Result}} &
+     &
+    \textit{\textbf{0.576}} &
+    \textit{\textbf{0.768}} &
+    \textit{\textbf{0.707}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{10} &
+    \multicolumn{1}{c|}{55} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.64 &
+    0.666 &
+    0.841 &
+    0.780 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{11} &
+    \multicolumn{1}{c|}{84} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    1.00 &
+    0.657 &
+    0.829 &
+    0.788 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{12} &
+    \multicolumn{1}{c|}{83} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    1.00 &
+    0.623 &
+    0.821 &
+    0.727 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{13} &
+    \multicolumn{1}{c|}{55} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.64 &
+    0.623 &
+    0.784 &
+    0.799 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{14} &
+    \multicolumn{1}{c|}{83} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    1.00 &
+    0.618 &
+    0.822 &
+    0.718 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{15} &
+    \multicolumn{1}{c|}{54} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.64 &
+    0.607 &
+    0.814 &
+    0.746 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{16} &
+    \multicolumn{1}{c|}{31} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.32 &
+    0.589 &
+    0.778 &
+    0.708 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{17} &
+    \multicolumn{1}{c|}{31} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.32 &
+    0.588 &
+    0.789 &
+    0.742 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{18} &
+    \multicolumn{1}{c|}{30} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} &
+    FL &
+    0.32 &
+    0.586 &
+    0.754 &
+    0.752 &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+    {\color[HTML]{FFFFFF} } &
+    \textit{\textbf{FL Result}} &
+     &
+    \textit{\textbf{0.618}} &
+    \textit{\textbf{0.803}} &
+    \textit{\textbf{0.751}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{19} &
+    \multicolumn{1}{c|}{85} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    1.00 &
+    0.659 &
+    0.811 &
+    0.807 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{20} &
+    \multicolumn{1}{c|}{84} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    1.00 &
+    0.657 &
+    0.802 &
+    0.812 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{21} &
+    \multicolumn{1}{c|}{56} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    0.64 &
+    0.650 &
+    0.785 &
+    0.800 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{22} &
+    \multicolumn{1}{c|}{100} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    1.00 &
+    0.643 &
+    0.787 &
+    0.827 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{23} &
+    \multicolumn{1}{c|}{29} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    0.32 &
+    0.624 &
+    0.779 &
+    0.800 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{24} &
+    \multicolumn{1}{c|}{54} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    0.64 &
+    0.598 &
+    0.801 &
+    0.728 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{25} &
+    \multicolumn{1}{c|}{55} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    0.64 &
+    0.585 &
+    0.797 &
+    0.686 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{26} &
+    \multicolumn{1}{c|}{35} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    0.32 &
+    0.504 &
+    0.697 &
+    0.629 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{27} &
+    \multicolumn{1}{c|}{28} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    DL &
+    0.32 &
+    0.427 &
+    0.523 &
+    0.550 &
+    TPR \\ \hline
+   &
+    \textit{\textbf{}} &
+    {\color[HTML]{FFFFFF} } &
+    \textit{\textbf{DL Result}} &
+     &
+    \textit{\textbf{0.594}} &
+    \textit{\textbf{0.754}} &
+    \textit{\textbf{0.738}} &
+    \textbf{PPV} \\ \hline
+    \multicolumn{1}{|c|}{28} &
+    \multicolumn{1}{c|}{86} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    1.00 &
+    0.660 &
+    0.795 &
+    0.833 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{29} &
+    \multicolumn{1}{c|}{99} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    1.00 &
+    0.647 &
+    0.808 &
+    0.794 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{30} &
+    \multicolumn{1}{c|}{55} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    0.64 &
+    0.646 &
+    0.791 &
+    0.818 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{31} &
+    \multicolumn{1}{c|}{84} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    1.00 &
+    0.628 &
+    0.783 &
+    0.821 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{32} &
+    \multicolumn{1}{c|}{28} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    0.32 &
+    0.627 &
+    0.761 &
+    0.759 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{33} &
+    \multicolumn{1}{c|}{54} &
+    \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+    TL &
+    0.64 &
+    0.605 &
+    0.788 &
+    0.771 &
+    PPV \\ \hline
+  \end{tabular}%
+  }
+  \end{table}
+
+  % Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{ccc|l|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    {\color[HTML]{FFFFFF} Loss type} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} selection \%} &
+    {\color[HTML]{FFFFFF} Iou} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+    \multicolumn{1}{|c|}{34} &
+      \multicolumn{1}{c|}{34} &
+      \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+      TL &
+      0.32 &
+      0.600 &
+      0.784 &
+      0.733 &
+      PPV \\ \hline
+    \multicolumn{1}{|c|}{35} &
+      \multicolumn{1}{c|}{64} &
+      \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+      TL &
+      0.64 &
+      0.591 &
+      0.765 &
+      0.728 &
+      PPV \\ \hline
+    \multicolumn{1}{|c|}{36} &
+      \multicolumn{1}{c|}{29} &
+      \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} &
+      TL &
+      0.32 &
+      0.563 &
+      0.726 &
+      0.712 &
+      PPV \\ \hline
+     &
+      \textit{\textbf{}} &
+      {\color[HTML]{FFFFFF} } &
+      \textit{\textbf{TL Result}} &
+       &
+      \textit{\textbf{0.618}} &
+      \textit{\textbf{0.778}} &
+      \textit{\textbf{0.774}} &
+      \textbf{PPV} \\ \hline
+      
+  \multicolumn{1}{|c|}{37} &
+    \multicolumn{1}{c|}{141} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    1.00 &
+    0.647 &
+    0.816 &
+    0.801 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{38} &
+    \multicolumn{1}{c|}{92} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.64 &
+    0.625 &
+    0.801 &
+    0.786 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{39} &
+    \multicolumn{1}{c|}{46} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.32 &
+    0.599 &
+    0.809 &
+    0.730 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{40} &
+    \multicolumn{1}{c|}{139} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    1.00 &
+    0.595 &
+    0.793 &
+    0.741 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{41} &
+    \multicolumn{1}{c|}{91} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.64 &
+    0.594 &
+    0.771 &
+    0.784 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{42} &
+    \multicolumn{1}{c|}{91} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.64 &
+    0.593 &
+    0.823 &
+    0.727 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{43} &
+    \multicolumn{1}{c|}{47} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.32 &
+    0.584 &
+    0.756 &
+    0.747 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{44} &
+    \multicolumn{1}{c|}{48} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    0.32 &
+    0.574 &
+    0.760 &
+    0.737 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{45} &
+    \multicolumn{1}{c|}{213} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    HL\textsubscript{1} &
+    1.00 &
+    0.566 &
+    0.758 &
+    0.726 &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+    {\color[HTML]{FFFFFF} } &
+    \textit{\textbf{HL\textsubscript{1} Result}} &
+     &
+    \textit{\textbf{0.597}} &
+    \textit{\textbf{0.788}} &
+    \textit{\textbf{0.753}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{46} &
+    \multicolumn{1}{c|}{69} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    1.00 &
+    0.384 &
+    0.560 &
+    0.526 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{47} &
+    \multicolumn{1}{c|}{24} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.32 &
+    0.382 &
+    0.533 &
+    0.555 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{48} &
+    \multicolumn{1}{c|}{104} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    1.00 &
+    0.382 &
+    0.516 &
+    0.497 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{49} &
+    \multicolumn{1}{c|}{24} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.32 &
+    0.375 &
+    0.603 &
+    0.664 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{50} &
+    \multicolumn{1}{c|}{25} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.32 &
+    0.371 &
+    0.545 &
+    0.508 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{51} &
+    \multicolumn{1}{c|}{65} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    1.00 &
+    0.338 &
+    0.523 &
+    0.532 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{52} &
+    \multicolumn{1}{c|}{68} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.64 &
+    0.266 &
+    0.509 &
+    0.515 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{53} &
+    \multicolumn{1}{c|}{44} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.64 &
+    0.238 &
+    0.446 &
+    0.450 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{54} &
+    \multicolumn{1}{c|}{44} &
+    \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} &
+    BL &
+    0.64 &
+    0.229 &
+    0.472 &
+    0.478 &
+    TPR \\ \hline
+   &
+    \textit{\textbf{}} &
+    {\color[HTML]{FFFFFF} } &
+    \textit{\textbf{BL Result}} &
+     &
+    \textit{\textbf{0.329}} &
+    \textit{\textbf{0.523}} &
+    \textit{\textbf{0.525}} &
+    \textbf{TPR} \\ \cline{4-4} \cline{6-9} 
+   &
+    \textit{\textbf{}} &
+    {\color[HTML]{FFFFFF} } &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.556}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.736}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.708}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{PPV}} \\ \cline{4-4} \cline{6-9} 
+  \end{tabular}%
+  }
+  \caption[Top baseline results for the Skin Lesion dataset]{The table presents the average values of various metrics of 3 baseline models for each loss function. The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:baseline_skin_lesion_long}
+  \end{table}

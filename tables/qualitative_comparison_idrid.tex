@@ -1,0 +1,54 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{|c|c|l|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  {\color[HTML]{FFFFFF} No.} &
+    {\color[HTML]{FFFFFF} R-time(m)} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} IoU 4} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  1 &
+    42 &
+    CE &
+     &
+    0.302 &
+    0.961 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.551 &
+    0.348 &
+    0.349 &
+    TPR \\ \hline
+  2 &
+    51 &
+    CE,DL &
+    AVG &
+    0.398 &
+    0.964 &
+    0.083 &
+    0.323 &
+    0.097 &
+    0.521 &
+    0.646 &
+    0.462 &
+    PPV \\ \hline
+  \end{tabular}%
+  }
+  \caption[Quantitative results for qualitative analysis (IDRID)]{The table presents two distinct models that will be used in this section for a qualitative comparison. Model no.1 is constructed using a baseline setup, while model no.2 has been trained with the proposed loss merging framework. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:qualitative_comparison_idrid}
+  \end{table}

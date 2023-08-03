@@ -1,0 +1,275 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cclc|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Loss}} &
+    {\color[HTML]{FFFFFF} Selection \%} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \multicolumn{1}{c|}{138} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    1.00 &
+    AVG &
+    0.762 &
+    0.984 &
+    0.751 &
+    0.607 &
+    0.705 &
+    0.874 &
+    0.834 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \multicolumn{1}{c|}{131} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    1.00 &
+    AVG &
+    0.746 &
+    0.982 &
+    0.752 &
+    0.572 &
+    0.676 &
+    0.862 &
+    0.823 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \multicolumn{1}{c|}{149} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    1.00 &
+    AVG &
+    0.729 &
+    0.979 &
+    0.689 &
+    0.596 &
+    0.651 &
+    0.849 &
+    0.823 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \multicolumn{1}{c|}{146} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    1.00 &
+    AVG &
+    0.721 &
+    0.978 &
+    0.762 &
+    0.589 &
+    0.555 &
+    0.846 &
+    0.833 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \multicolumn{1}{c|}{150} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    1.00 &
+    AVG &
+    0.711 &
+    0.978 &
+    0.734 &
+    0.608 &
+    0.525 &
+    0.879 &
+    0.782 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \multicolumn{1}{c|}{132} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    1.00 &
+    AVG &
+    0.704 &
+    0.980 &
+    0.742 &
+    0.478 &
+    0.615 &
+    0.804 &
+    0.821 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \multicolumn{1}{c|}{93} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.64 &
+    AVG &
+    0.731 &
+    0.980 &
+    0.759 &
+    0.587 &
+    0.600 &
+    0.861 &
+    0.820 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{8} &
+    \multicolumn{1}{c|}{45} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.64 &
+    AVG &
+    0.715 &
+    0.979 &
+    0.763 &
+    0.545 &
+    0.571 &
+    0.844 &
+    0.811 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{9} &
+    \multicolumn{1}{c|}{89} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.64 &
+    AVG &
+    0.682 &
+    0.971 &
+    0.729 &
+    0.418 &
+    0.611 &
+    0.789 &
+    0.823 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{10} &
+    \multicolumn{1}{c|}{91} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.64 &
+    AVG &
+    0.678 &
+    0.976 &
+    0.749 &
+    0.538 &
+    0.450 &
+    0.829 &
+    0.753 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{11} &
+    \multicolumn{1}{c|}{88} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.64 &
+    AVG &
+    0.669 &
+    0.971 &
+    0.716 &
+    0.472 &
+    0.516 &
+    0.804 &
+    0.816 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{12} &
+    \multicolumn{1}{c|}{91} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.64 &
+    AVG &
+    0.610 &
+    0.976 &
+    0.749 &
+    0.265 &
+    0.450 &
+    0.761 &
+    0.685 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{13} &
+    \multicolumn{1}{c|}{48} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.32 &
+    AVG &
+    0.715 &
+    0.978 &
+    0.703 &
+    0.571 &
+    0.609 &
+    0.827 &
+    0.832 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{14} &
+    \multicolumn{1}{c|}{50} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.32 &
+    AVG &
+    0.681 &
+    0.977 &
+    0.763 &
+    0.384 &
+    0.601 &
+    0.774 &
+    0.812 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{15} &
+    \multicolumn{1}{c|}{47} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.32 &
+    AVG &
+    0.676 &
+    0.973 &
+    0.721 &
+    0.515 &
+    0.497 &
+    0.833 &
+    0.787 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{16} &
+    \multicolumn{1}{c|}{51} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.32 &
+    AVG &
+    0.668 &
+    0.974 &
+    0.721 &
+    0.463 &
+    0.515 &
+    0.774 &
+    0.799 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{17} &
+    \multicolumn{1}{c|}{53} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.32 &
+    AVG &
+    0.668 &
+    0.974 &
+    0.705 &
+    0.468 &
+    0.526 &
+    0.782 &
+    0.790 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{18} &
+    \multicolumn{1}{c|}{51} &
+    \multicolumn{1}{l|}{HL\textsubscript{1},FL} &
+    0.32 &
+    AVG &
+    0.660 &
+    0.980 &
+    0.799 &
+    0.370 &
+    0.489 &
+    0.797 &
+    0.745 &
+    PPV \\ \hline
+   &
+     &
+     &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.696}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.977}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.739}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.503}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.565}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.822}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.799}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{5-13} 
+  \end{tabular}%
+  }
+  \caption[Specific Combination Medaka - AVG]{Table lists six models for each selection percentage trained repetitively on the loss combination \ac{HL}, \ac{FL} using the arithmetic averaging (AVG) strategy for merging. These results serve as part of a final comparison against baseline results providing an identical iteration number. The columns $IoU_0,\hdots,IoU_3$ represent the four classes, Background, Bulbus, Atrium and Ventricle.  The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:top_six_HLFL_medaka}
+  \end{table}

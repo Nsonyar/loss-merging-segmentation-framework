@@ -1,0 +1,55 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{cclc|c|c|c|c|c|c|c|}
+    \hline
+    \rowcolor[HTML]{000000} 
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+      \multicolumn{1}{l|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Loss}} &
+      {\color[HTML]{FFFFFF} Selection \%} &
+      {\color[HTML]{FFFFFF} Strategy} &
+      {\color[HTML]{FFFFFF} IoU} &
+      {\color[HTML]{FFFFFF} IoU 0} &
+      {\color[HTML]{FFFFFF} IoU 1} &
+      {\color[HTML]{FFFFFF} PPV} &
+      {\color[HTML]{FFFFFF} TPR} &
+      {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+    \multicolumn{1}{|c|}{1}  & \multicolumn{1}{c|}{299} & \multicolumn{1}{l|}{CE,TL} & 1.00 & NWS & 0.660 & 0.790 & 0.529 & 0.799 & 0.840 & TPR \\ \hline
+    \multicolumn{1}{|c|}{2}  & \multicolumn{1}{c|}{167} & \multicolumn{1}{l|}{CE,TL} & 1.00 & NWS & 0.659 & 0.790 & 0.529 & 0.787 & 0.855 & TPR \\ \hline
+    \multicolumn{1}{|c|}{3}  & \multicolumn{1}{c|}{302} & \multicolumn{1}{l|}{CE,TL} & 1.00 & NWS & 0.652 & 0.798 & 0.507 & 0.810 & 0.814 & TPR \\ \hline
+    \multicolumn{1}{|c|}{4}  & \multicolumn{1}{c|}{283} & \multicolumn{1}{l|}{CE,TL} & 1.00 & NWS & 0.651 & 0.805 & 0.497 & 0.800 & 0.807 & PPV \\ \hline
+    \multicolumn{1}{|c|}{5}  & \multicolumn{1}{c|}{285} & \multicolumn{1}{l|}{CE,TL} & 1.00 & NWS & 0.629 & 0.821 & 0.437 & 0.769 & 0.766 & PPV \\ \hline
+    \multicolumn{1}{|c|}{6}  & \multicolumn{1}{c|}{294} & \multicolumn{1}{l|}{CE,TL} & 1.00 & NWS & 0.629 & 0.768 & 0.490 & 0.768 & 0.831 & TPR \\ \hline
+    \multicolumn{1}{|c|}{7}  & \multicolumn{1}{c|}{185} & \multicolumn{1}{l|}{CE,TL} & 0.64 & NWS & 0.671 & 0.812 & 0.529 & 0.822 & 0.814 & PPV \\ \hline
+    \multicolumn{1}{|c|}{8}  & \multicolumn{1}{c|}{166} & \multicolumn{1}{l|}{CE,TL} & 0.64 & NWS & 0.670 & 0.802 & 0.539 & 0.796 & 0.850 & TPR \\ \hline
+    \multicolumn{1}{|c|}{9}  & \multicolumn{1}{c|}{174} & \multicolumn{1}{l|}{CE,TL} & 0.64 & NWS & 0.665 & 0.817 & 0.513 & 0.827 & 0.809 & PPV \\ \hline
+    \multicolumn{1}{|c|}{10} & \multicolumn{1}{c|}{186} & \multicolumn{1}{l|}{CE,TL} & 0.64 & NWS & 0.661 & 0.821 & 0.501 & 0.816 & 0.798 & PPV \\ \hline
+    \multicolumn{1}{|c|}{11} & \multicolumn{1}{c|}{197} & \multicolumn{1}{l|}{CE,TL} & 0.64 & NWS & 0.655 & 0.811 & 0.499 & 0.793 & 0.824 & TPR \\ \hline
+    \multicolumn{1}{|c|}{12} & \multicolumn{1}{c|}{202} & \multicolumn{1}{l|}{CE,TL} & 0.64 & NWS & 0.648 & 0.817 & 0.479 & 0.819 & 0.771 & PPV \\ \hline
+    \multicolumn{1}{|c|}{13} & \multicolumn{1}{c|}{106} & \multicolumn{1}{l|}{CE,TL} & 0.32 & NWS & 0.657 & 0.830 & 0.483 & 0.842 & 0.774 & PPV \\ \hline
+    \multicolumn{1}{|c|}{14} & \multicolumn{1}{c|}{109} & \multicolumn{1}{l|}{CE,TL} & 0.32 & NWS & 0.648 & 0.804 & 0.492 & 0.800 & 0.817 & TPR \\ \hline
+    \multicolumn{1}{|c|}{15} & \multicolumn{1}{c|}{102} & \multicolumn{1}{l|}{CE,TL} & 0.32 & NWS & 0.629 & 0.805 & 0.453 & 0.780 & 0.804 & TPR \\ \hline
+    \multicolumn{1}{|c|}{16} & \multicolumn{1}{c|}{56}  & \multicolumn{1}{l|}{CE,TL} & 0.32 & NWS & 0.619 & 0.778 & 0.459 & 0.792 & 0.787 & PPV \\ \hline
+    \multicolumn{1}{|c|}{17} & \multicolumn{1}{c|}{103} & \multicolumn{1}{l|}{CE,TL} & 0.32 & NWS & 0.609 & 0.740 & 0.479 & 0.789 & 0.776 & PPV \\ \hline
+    \multicolumn{1}{|c|}{18} & \multicolumn{1}{c|}{115} & \multicolumn{1}{l|}{CE,TL} & 0.32 & NWS & 0.591 & 0.731 & 0.451 & 0.777 & 0.784 & TPR \\ \hline
+     &
+       &
+       &
+       &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.645}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.797}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.493}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.799}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.807}}} &
+      \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{TPR}}} \\ \cline{5-11} 
+    \end{tabular}%
+    }
+    \caption[Specific Combination Skin Lesion]{Table lists six models for each selection percentage trained repetitively on the loss combination \ac{CE}, \ac{TL} using the normalized weighted sum (NWS) strategy for merging. These results serve as part of a final comparison against baseline results providing an identical iteration number. The columns $IoU_0,\hdots,IoU_1$ represent the two classes, Background and Foreground.  The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+    \label{tab:top_six_CETL_melanoma}
+    \end{table}

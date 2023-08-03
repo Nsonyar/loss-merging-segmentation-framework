@@ -1,0 +1,8 @@
+\chapter{Metric Comparison}
+\label{chap:metric_comparison}
+It can be challenging to determine the best metric, as users may prioritize different aspects of the classification results depending on the task. Semantic segmentation often involves regions of interest much smaller than the background region. When valid for the entire dataset, the data is considered unbalanced. Therefore, choosing the right metric that accurately reflects changes in unstable situations is crucial.
+
+Table \ref{tab:metric_comparison_1} compares a situation where one pixel is misclassified as a false negative for both balanced and unbalanced labels. Table \ref{tab:metric_comparison_2} compares a similar situation focusing on changing a false positive misclassified pixel. Both tables show that the \ac{IoU} and \ac{DSC} metrics reflect the performance change as expected for balanced and imbalanced data. In contrast, \ac{Acc} does not change as it includes true negatives in its calculation, providing a very high misleading score for both cases.
+
+\input{tables/metric_comparison_1}
+\input{tables/metric_comparison_2}

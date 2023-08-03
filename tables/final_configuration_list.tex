@@ -1,0 +1,42 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{6638B6} 
+  {\color[HTML]{FFFFFF} No.} &
+    {\color[HTML]{FFFFFF} Combo type} &
+    {\color[HTML]{FFFFFF} Selection \%} &
+    {\color[HTML]{FFFFFF} Strategies} &
+    {\color[HTML]{FFFFFF} Dataset} &
+    {\color[HTML]{FFFFFF} Time based} &
+    {\color[HTML]{FFFFFF} Epoch} &
+    {\color[HTML]{FFFFFF} Model} &
+    {\color[HTML]{FFFFFF} Config type} &
+    {\color[HTML]{FFFFFF} Model count} &
+    {\color[HTML]{FFFFFF} Auto LR} &
+    {\color[HTML]{FFFFFF} Img size} \\ \hline
+  1  & single         & 0.32,0.64,1.00 & -                           & Medaka      & False & 100 & UNET & Baseline   & 18  & False & 256 x 256 \\ \hline
+  2  & double,triple  & 0.32,0.64,1.00 & MAX,MIN,AVG,HARMONIC,WS,NWS & Medaka      & False & 100 & UNET & Discrete   & 360 & False & 256 x 256 \\ \hline
+  3  & double,triple  & 0.32,0.64,1.00 & PBM                         & Medaka      & False & 100 & UNET & Continuous & -   & False & 256 x 256 \\ \hline
+  4  & double,triple  & 0.32,0.64,1.00 & TBM                         & Medaka      & True  & 100 & UNET & Continuous & -   & False & 256 x 256 \\ \hline
+  5  & double, triple & 0.32,0.64,1.00 & Any                         & Medaka      & False & 100 & UNET & Specific   & 18  & False & 256 x 256 \\ \hline
+  6  & single         & 0.32,0.64,1.00 & -                           & Skin lesion & False & 100 & UNET & Baseline   & 18  & False & 256 x 256 \\ \hline
+  7  & double,triple  & 0.32,0.64,1.00 & MAX,MIN,AVG,HARMONIC,WS,NWS & Skin lesion & False & 100 & UNET & Discrete   & 360 & False & 256 x 256 \\ \hline
+  8  & double,triple  & 0.32,0.64,1.00 & PBM                         & Skin lesion & False & 100 & UNET & Continuous & -   & False & 256 x 256 \\ \hline
+  9  & double,triple  & 0.32,0.64,1.00 & TBM                         & Skin lesion & True  & 100 & UNET & Continuous & -   & False & 256 x 256 \\ \hline
+  10 & double, triple & 0.32,0.64,1.00 & Any                         & Skin lesion & False & 100 & UNET & Specific   & 18  & False & 256 x 256 \\ \hline
+  11 & single         & 1.00           & -                           & IDRID       & False & 150 & UNET & Baseline   & 6   & True  & 512 x 512 \\ \hline
+  12 & double,triple  & 1.00           & MAX,MIN,AVG,HARMONIC,WS,NWS & IDRID       & False & 150 & UNET & Discrete   & 120 & True  & 512 x 512 \\ \hline
+  13 & double,triple  & 1.00           & PBM                         & IDRID       & False & 150 & UNET & Continuous & -   & True  & 512 x 512 \\ \hline
+  14 & double,triple  & 1.00           & TBM                         & IDRID       & True  & 150 & UNET & Continuous & -   & True  & 512 x 512 \\ \hline
+  15 & double, triple & 1.00           & Any                         & IDRID       & False & 150 & UNET & Specific   & 6   & True  & 512 x 512 \\ \hline
+  \end{tabular}%
+  }
+  \caption[Final Configuration List]{Five distinct configurations are utilized for each dataset. It is important to note that for the \acf{IDRID}, certain configuration parameters, such as \texttt{selection\_percentage}, \texttt{epochs}, \texttt{auto\_learning\_rate}, and \texttt{image\_size}, primarily differ due to its small size and the comparatively minimal additional computational effort needed for training. To ensure more dependable results, each configuration undergoes multiple training sessions, effectively preventing performance biases in extreme directions.}
+  \label{tab:final_configuration_list}
+  \end{table}

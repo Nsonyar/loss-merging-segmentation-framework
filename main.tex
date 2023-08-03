@@ -1,0 +1,205 @@
+%================================= GENERAL PACKAGES ===========================%
+\documentclass[a4paper,11pt]{scrreprt}
+\usepackage{scrhack}
+\usepackage[a4paper,total={6in, 8.5in}]{geometry}
+%\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[autostyle,german=quotes,english=american]{csquotes}
+\usepackage[head=false,foot=true,colorhead=true]{./styles/rwu/rwukoma}
+\usepackage{./styles/preamble} 
+\usepackage[pdfusetitle,hidelinks]{hyperref}
+\usepackage{lipsum}
+\usepackage{algorithmicx,algpseudocode}
+\usepackage{wrapfig, framed, caption}
+\usepackage[useregional]{datetime2}
+\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage{tabto}
+\usepackage[printonlyused,withpage,nohyperlinks,smaller]{acronym}
+\usepackage[backend=bibtex,style=numeric,sorting=nyt]{biblatex}
+\usepackage[font=small,labelfont=bf,labelsep=space]{caption}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pgfgantt}
+\usepackage[toc]{glossaries}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{bbm}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{adjustbox}
+\usepackage{calc}
+\usepackage{tabularx, booktabs}
+\usepackage{hhline}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{longtable} % For multi-page tables
+\usepackage{array} % For column formatting
+\usepackage{tabulary} % For automatic width adjustment
+\usetikzlibrary{mindmap}
+\interfootnotelinepenalty=10000
+%================================= CAPTION SETUP ==============================%
+\captionsetup{figurename=Fig.,tablename=Tab.,format=plain}
+
+%=============================== HYPERREF SETUP ===============================%
+\hypersetup{pdfauthor={Martin Samuel Lanz}}
+
+%============================== COLOR DEFINITION ==============================%
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+%============================== CODE SNIPPET SETUP ============================%
+\lstdefinestyle{mystyle}{
+  language=Python,
+  backgroundcolor=\color{black},
+  basicstyle=\color{white}\ttfamily\small,
+  keywordstyle=\color{rwuvioletlight},
+  numberstyle=\tiny\color{gray},
+  stringstyle=\color{rwuvioletlight},
+  commentstyle=\color{rwucyanlight},
+  morecomment=[l]{\#},
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  emph={get_loss_combinations}, % list your function names here
+  emphstyle=\color{rwucyan40}\bfseries % set the style for function names
+}
+
+\input{utils/abk_commands}   
+%================================= TABLE SETUP ==========================================%
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+%========================== BIBLIOGRAPHY SETUP ================================%
+\setcounter{biburlnumpenalty}{9000} % Counter for URL line breaks - general
+\setcounter{biburllcpenalty}{9000}  % Counter for URL line breaks - lower case
+\setcounter{biburlucpenalty}{9000}  % Counter for URL line breaks - upper case
+\emergencystretch=1em
+\addbibresource{literature/bibliography.bib}
+\emergencystretch=1em
+\DeclareFieldFormat{eprint}{} % Exclude eprint field from bibliography
+\AtEveryBibitem{\clearfield{eprint}} % Exclude eprint field from citations
+
+%=========================== TITLEPAGE SETUP ==================================%
+% "Advancing Semantic Segmentation with Combined Loss Functions"
+% "Loss Function Fusion for Improved Semantic Segmentation"
+% "Multi-objective Loss Functions in Semantic Segmentation"
+% "Semantic Segmentation: Exploring Composite Loss Functions"
+% "A Study on Loss Function Interplay for Semantic Segmentation"
+% "Loss Function Synergy in Semantic Segmentation Models"
+% "Optimized Loss Functions for Robust Semantic Segmentation"
+% "Loss Function Integration Techniques for Semantic Segmentation"
+% "Tailoring Loss Functions for Enhanced Semantic Segmentation"
+% "Merging Loss Functions for Superior Semantic Segmentation"
+% Unified framework for loss merging strategies to boost baseline performance in semantic segmentation
+\title{Unified Loss Merging Framework for Enhanced Semantic Segmentation}
+\subtitle{Master Thesis} 
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{0.7\textwidth}
+
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+
+\makeatletter                       
+
+\newcommand\titlepagedecoration{%
+    \begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+    \coordinate (aux1) at ([yshift=-15pt]current page.north east);
+    \coordinate (aux2) at ([yshift=-410pt]current page.north east);
+    \coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+    \coordinate (aux4) at ([yshift=-150pt]current page.north east);
+    
+    \begin{scope}[kitgreen!100,line width=12pt,rounded corners=12pt]
+    \draw
+    (aux1) -- coordinate (a)
+    ++(225:5) --
+    ++(-45:5.1) coordinate (b);
+    \draw[shorten <= -10pt]
+    (aux3) --
+    (a) --
+    (aux1);
+    \draw[black,shorten <= -10pt]
+    (b) --
+    ++(225:2.2) --
+    ++(-45:2.2);
+    \end{scope}
+    \draw[black,line width=8pt,rounded corners=8pt,shorten <= -10pt]
+    (aux4) --
+    ++(225:0.8) --
+    ++(-45:0.8);
+    \begin{scope}[kitgreen!100,line width=6pt,rounded corners=8pt]
+    \draw[shorten <= -10pt]
+    (aux2) --
+    ++(225:3) coordinate[pos=0.45] (c) --
+    ++(-45:3.1);
+    \draw
+    (aux2) --
+    (c) --
+    ++(135:2.5) --
+    ++(45:2.5) --
+    ++(-45:2.5) coordinate[pos=0.3] (d);   
+    \draw 
+    (d) -- +(45:1);
+    \end{scope}
+    \end{tikzpicture}%
+}
+%============================== BEGIN DOCUMENT ================================%
+\begin{document}
+
+
+\pagestyle{frontmatter}         % /== Set the page style to front-matter ==/
+\pagenumbering{roman}           % /== Roman page numbering for introduction ==/
+
+% === Title page === /
+\include{chapters/00_titlepage}
+\include{chapters/declaration}
+
+% === Directories === /
+\setcounter{tocdepth}{3}
+\tableofcontents
+\listoftables
+\listoffigures
+% === Chapters === /
+\clearpage
+\pagestyle{mainmatter}          % /== Set the page style to mainmatter ==/
+\pagenumbering{arabic}          % /== Arabic page numbering for main content ==/
+\include{chapters/01_introduction}
+\include{chapters/02_fundamentals}
+\include{chapters/03_literature_review}
+\include{chapters/04_methodology}
+\include{chapters/05_experimental_setup}
+\include{chapters/06_implementation}
+\include{chapters/07_results_analysis}
+\include{chapters/08_discussion}
+\include{chapters/09_conclusion}
+
+% === Examples === /
+% \include{chapters/99_latex_examples}
+
+% === Appendices === /
+\appendix
+\input{appendix/A_list_of_abbreviations}
+\include{appendix/B_mathematical_formulations}
+\include{appendix/C_metric_comparison}
+\include{appendix/D_extended_literature_review}
+\include{appendix/E_configuration_details}
+\include{appendix/F_code_implementation_details}
+\include{appendix/G_supplementary_results}
+\input{appendix/H_bibliography}
+
+\end{document}

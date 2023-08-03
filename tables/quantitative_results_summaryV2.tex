@@ -1,0 +1,101 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{cccccc|ccccc|c|ccccc|}
+    \cline{7-11} \cline{13-17}
+     &
+       &
+       &
+       &
+       &
+       &
+      \multicolumn{5}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Top Average (Specific)}} &
+       &
+      \multicolumn{5}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Top Model}} \\ \cline{4-5} \cline{7-11} \cline{13-17} 
+     &
+       &
+      \multicolumn{1}{c|}{} &
+      \multicolumn{2}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Baseline-Exceeding Count}} &
+       &
+      \multicolumn{3}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Merging}} &
+      \multicolumn{2}{c|}{\cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} Baseline}} &
+       &
+      \multicolumn{3}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Merging}} &
+      \multicolumn{2}{c|}{\cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} Baseline}} \\ \cline{2-2} \cline{4-5} \cline{7-11} \cline{13-17} 
+    \multicolumn{1}{c|}{} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Difficulty}} &
+      \multicolumn{1}{c|}{} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Double}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} Triple}} &
+       &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} IoU}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} Loss}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} Strategy}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} Iou}} &
+      \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} Loss} &
+       &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} IoU}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} Loss}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} Strategy}} &
+      \multicolumn{1}{c|}{\cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} Iou}} &
+      \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} Loss} \\ \cline{1-2} \cline{4-5} \cline{7-11} \cline{13-17} 
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Medaka Fish}} &
+      \multicolumn{1}{c|}{+} &
+      \multicolumn{1}{c|}{} &
+      \multicolumn{1}{c|}{23} &
+      \multicolumn{1}{c|}{18} &
+       &
+      \multicolumn{1}{c|}{0.695} &
+      \multicolumn{1}{c|}{FL,DL,BL} &
+      \multicolumn{1}{c|}{PBM} &
+      \multicolumn{1}{c|}{0.672} &
+      CE &
+       &
+      \multicolumn{1}{c|}{0.772} &
+      \multicolumn{1}{c|}{CE,TL,BL} &
+      \multicolumn{1}{c|}{PBM} &
+      \multicolumn{1}{c|}{0.752} &
+      FL,HL \\ \cline{1-2} \cline{4-5} \cline{7-11} \cline{13-17} 
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Skin Lesion}} &
+      \multicolumn{1}{c|}{++} &
+      \multicolumn{1}{c|}{} &
+      \multicolumn{1}{c|}{8} &
+      \multicolumn{1}{c|}{8} &
+       &
+      \multicolumn{1}{c|}{0.645} &
+      \multicolumn{1}{c|}{CE,TL} &
+      \multicolumn{1}{c|}{NWS} &
+      \multicolumn{1}{c|}{0.594} &
+      FL &
+       &
+      \multicolumn{1}{c|}{0.672} &
+      \multicolumn{1}{c|}{CE,TL,HL} &
+      \multicolumn{1}{c|}{HARMONIC} &
+      \multicolumn{1}{c|}{0.667} &
+      CE \\ \cline{1-2} \cline{4-5} \cline{7-11} \cline{13-17} 
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IDRID}} &
+      \multicolumn{1}{c|}{+++} &
+      \multicolumn{1}{c|}{} &
+      \multicolumn{1}{c|}{9} &
+      \multicolumn{1}{c|}{3} &
+       &
+      \multicolumn{1}{c|}{0.380} &
+      \multicolumn{1}{c|}{CE,DL} &
+      \multicolumn{1}{c|}{AVG} &
+      \multicolumn{1}{c|}{0.341} &
+      CE &
+       &
+      \multicolumn{1}{c|}{0.414} &
+      \multicolumn{1}{c|}{CE,TL} &
+      \multicolumn{1}{c|}{MAX} &
+      \multicolumn{1}{c|}{0.367} &
+      CE \\ \cline{1-2} \cline{4-5} \cline{7-11} \cline{13-17} 
+    \end{tabular}%
+    }
+    \caption[Summary of Quantitative Results]{Summary of quantitative results}
+    \label{tab:quantitative_results_summaryV2}
+    \end{table}

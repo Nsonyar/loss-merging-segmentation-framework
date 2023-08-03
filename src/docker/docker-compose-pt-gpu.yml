@@ -1,0 +1,20 @@
+version: '2.4'
+services:
+  pytorch-base:
+    image: pytorch/mergingstrategies:latest
+    runtime: nvidia
+    environment:
+        DISPLAY: $DISPLAY
+        QT_X11_NO_MITSHM: '1'
+        NVIDIA_VISIBLE_DEVICES: all
+        NVIDIA_DRIVER_CAPABILITIES: compute,video,utility,graphics
+    network_mode: host
+    privileged: true
+    stdin_open: true
+    ipc: host
+    working_dir: /home/Unified-Loss-Merging-Framework-for-Enhanced-Semantic-Segmentation/src/scripts/
+    volumes:
+        - /tmp/.X11-unix:/tmp/.X11-unix
+        - $HOME/.Xauthority:/root/.Xauthority
+        - $HOME/Documents/Unified-Loss-Merging-Framework-for-Enhanced-Semantic-Segmentation/:/home/Unified-Loss-Merging-Framework-for-Enhanced-Semantic-Segmentation/
+    command: tail -f /dev/null

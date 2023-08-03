@@ -1,0 +1,37 @@
+\definecolor{mylightgray}{HTML}{E9E9E9}
+
+\begin{table}[H]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|>{\centering\arraybackslash}m{.5cm}|>{\centering\arraybackslash}m{1.75cm}|>{\centering\arraybackslash}m{1.75cm}|>{\centering\arraybackslash}m{1.75cm}|>{\centering\arraybackslash}m{1.75cm}|>{\centering\arraybackslash}m{1.75cm}|>{\centering\arraybackslash}m{1.75cm}|>{\centering\arraybackslash}m{1.75cm}|}
+            \cline{2-7}\noalign{\vskip0.23pt}
+            \multicolumn{1}{c|}{}                                                                      &
+            \multicolumn{2}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF}(DB) Distribution-based}} &
+            \multicolumn{2}{c|}{\cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} (RB) Region-based}}      &
+            \multicolumn{2}{c|}{\cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} (BB) Boundary-based}}    & \multicolumn{1}{c}{}
+            \\ \hline
+            \rowcolor{black}
+            \color{white}No.                                                                           & \color{white}CE      & \color{white}FL & \color{white}DL & \color{white}TL & \color{white}HL & \color{white}BL & \color{white}Combo type       \\ \hline
+            1                                                                                          & \tick                &                 & \tick           &                 &                 &                 & double                        \\ \hline
+            2                                                                                          & \tick                &                 &                 & \tick           &                 &                 & double                        \\ \hline
+            3                                                                                          & \tick                &                 &                 &                 & \tick           &                 & double                        \\ \hline
+            4                                                                                          & \tick                &                 &                 &                 &                 & \tick           & double                        \\ \hline
+            5                                                                                          &                      & \tick           & \tick           &                 &                 &                 & double                        \\ \hline
+            6                                                                                          &                      & \tick           &                 & \tick           &                 &                 & double                        \\ \hline
+            7                                                                                          &                      & \tick           &                 &                 & \tick           &                 & double                        \\ \hline
+            8                                                                                          &                      & \tick           &                 &                 &                 & \tick           & double                        \\ \hline
+            9                                                                                          &                      &                 & \tick           &                 & \tick           &                 & double                        \\ \hline
+            10                                                                                         &                      &                 & \tick           &                 &                 & \tick           & double                        \\ \hline
+            11                                                                                         &                      &                 &                 & \tick           & \tick           &                 & double                        \\ \hline
+            12                                                                                         &                      &                 &                 & \tick           &                 & \tick           & double                        \\ \hline
+            13                                                                                         & \tick                &                 & \tick           &                 & \tick           &                 & \cellcolor{mylightgray}triple \\ \hline
+            14                                                                                         & \tick                &                 & \tick           &                 &                 & \tick           & \cellcolor{mylightgray}triple \\ \hline
+            15                                                                                         & \tick                &                 &                 & \tick           & \tick           &                 & \cellcolor{mylightgray}triple \\ \hline
+            16                                                                                         & \tick                &                 &                 & \tick           &                 & \tick           & \cellcolor{mylightgray}triple \\ \hline
+            17                                                                                         &                      & \tick           & \tick           &                 & \tick           &                 & \cellcolor{mylightgray}triple \\ \hline
+            18                                                                                         &                      & \tick           & \tick           &                 &                 & \tick           & \cellcolor{mylightgray}triple \\ \hline
+            19                                                                                         &                      & \tick           &                 & \tick           & \tick           &                 & \cellcolor{mylightgray}triple \\ \hline
+            20                                                                                         &                      & \tick           &                 & \tick           &                 & \tick           & \cellcolor{mylightgray}triple \\ \hline
+        \end{tabular}%
+    }
+    \caption[Loss combinations]{Table of all loss combinations without inter-type merging.}\label{tab:loss_combinations}
+\end{table}

@@ -1,0 +1,29 @@
+\ProvidesPackage{./styles/preamble}
+
+% /=== Setup page header and footer ===/
+\RequirePackage{scrlayer-scrpage}
+\RequirePackage{lastpage}
+\clearpairofpagestyles
+
+% % /== Add chapter to header on the right ==/
+% \ohead{\textcolor{gray}{\MakeUppercase{\headmark}}}
+% % /== Add page and total page number to footer on the right ==/
+% \ofoot*{\textcolor{gray}{\pagemark~|~\pageref*{LastPage}}}
+% \clearpairofpagestyles                  % /== Clears the current styles ==/
+
+% /== New pagestyle for frontmatter pages ==/
+\newpairofpagestyles{frontmatter}{
+    % % /= Watermarking added to footer in the center =/
+    % \cfoot*{\watermarktext}
+    % /= Add page number to footer on the right for all pages =/
+    \cfoot*{\normalsize\textcolor{gray}\pagemark}
+}
+% /== New pagestyle for the mainmatter pages ==/
+\newpairofpagestyles{mainmatter}{
+    % /= Add chapter to header on the right ony for following pages =/
+    \ohead{\textcolor{gray}{\MakeUppercase{\headmark}}}
+    % % /= Watermarking added to footer in the center =/
+    % \cfoot*{\watermarktext}
+    % /= Add page and total page number to footer on the right for all pages =/
+    \ofoot*{\textcolor{gray}{\pagemark~|~\pageref*{LastPage}}}
+}

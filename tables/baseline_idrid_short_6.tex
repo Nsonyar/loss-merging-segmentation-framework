@@ -1,0 +1,56 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|l|l|l|l|l|l|l|l|l|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    {\color[HTML]{FFFFFF} Loss type} &
+    {\color[HTML]{FFFFFF} Loss} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Iou}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 0}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 1}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 2}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 3}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} IoU 4}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} PPV}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TPR}} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{\textit{\textbf{1}}} &
+    \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} \textit{\textbf{DB}}} &
+    {\color[HTML]{000000} \textit{\textbf{CE}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.336}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.958}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.001}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.262}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.001}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.456}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.496}}} &
+    {\color[HTML]{000000} \textit{\textbf{0.398}}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{2} & \cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} DB} & FL                  & 0.300 & 0.955 & 0.004 & 0.245 & 0.001 & 0.294 & 0.463 & 0.374 & PPV \\ \hline
+  \multicolumn{1}{|c|}{3} & \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} & DL                  & 0.237 & 0.925 & 0.000 & 0.173 & 0.000 & 0.086 & 0.365 & 0.332 & PPV \\ \hline
+  \multicolumn{1}{|c|}{4} & \cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} RB} & TL                  & 0.228 & 0.952 & 0.000 & 0.000 & 0.000 & 0.188 & 0.262 & 0.269 & TPR \\ \hline
+  \multicolumn{1}{|c|}{5} & \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} & HL\textsubscript{1} & 0.283 & 0.940 & 0.000 & 0.000 & 0.000 & 0.477 & 0.343 & 0.340 & PPV \\ \hline
+  \multicolumn{1}{|c|}{6} & \cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} BB} & BL                  & 0.075 & 0.349 & 0.007 & 0.007 & 0.001 & 0.011 & 0.199 & 0.168 & PPV \\ \hline
+   &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.243}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.846}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.002}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.114}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.000}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.252}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.355}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.313}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{3-12} 
+  \end{tabular}%
+  }
+  \caption{The table presents a summary of the average values of various metrics trained for each loss function. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:baseline_idrid_short_6}
+  \end{table}

@@ -1,0 +1,123 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cl|l|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} IoU 4} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \textit{109} &
+    \textit{AVG} &
+    \textit{0.389} &
+    \textit{0.943} &
+    \textit{0.153} &
+    \textit{0.303} &
+    \textit{0.148} &
+    \textit{0.398} &
+    \textit{0.637} &
+    \textit{0.483} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \textit{123} &
+    \textit{HARMONIC} &
+    \textit{0.329} &
+    \textit{0.931} &
+    \textit{0.022} &
+    \textit{0.261} &
+    \textit{0.035} &
+    \textit{0.397} &
+    \textit{0.537} &
+    \textit{0.423} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \textit{57} &
+    \textit{MAX} &
+    \textit{0.380} &
+    \textit{0.925} &
+    \textit{0.199} &
+    \textit{0.295} &
+    \textit{0.174} &
+    \textit{0.306} &
+    \textit{0.633} &
+    \textit{0.504} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \textit{211} &
+    \textit{MIN} &
+    \textit{0.342} &
+    \textit{0.934} &
+    \textit{0.050} &
+    \textit{0.291} &
+    \textit{0.044} &
+    \textit{0.389} &
+    \textit{0.581} &
+    \textit{0.421} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \textit{90} &
+    \textit{NWS} &
+    \textit{0.349} &
+    \textit{0.942} &
+    \textit{0.086} &
+    \textit{0.276} &
+    \textit{0.148} &
+    \textit{0.292} &
+    \textit{0.616} &
+    \textit{0.452} &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{\textbf{6}} &
+    \textit{\textbf{70}} &
+    \textit{\textbf{PBM}} &
+    \textit{\textbf{0.397}} &
+    \textit{\textbf{0.932}} &
+    \textit{\textbf{0.132}} &
+    \textit{\textbf{0.347}} &
+    \textit{\textbf{0.106}} &
+    \textit{\textbf{0.467}} &
+    \textit{\textbf{0.622}} &
+    \textit{\textbf{0.489}} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \textit{134} &
+    \textit{WS} &
+    \textit{0.382} &
+    \textit{0.948} &
+    \textit{0.149} &
+    \textit{0.291} &
+    \textit{0.177} &
+    \textit{0.344} &
+    \textit{0.637} &
+    \textit{0.497} &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.367}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.937}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.113}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.295}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.119}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.370}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.609}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.467}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{PPV}} \\ \cline{3-12} 
+  \end{tabular}%
+  }
+  \caption{Table represents the average for  the top 3 double loss combination results per merge strategy. The corresponding table with all models listed individually, can be viewed in \secref{subsubsec:merge_strategy_results_idrid_double_long_v2}. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:merge_strategy_results_idrid_double_short_v2}
+  \end{table}

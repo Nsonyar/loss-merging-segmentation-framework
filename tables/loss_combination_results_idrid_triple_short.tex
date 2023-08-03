@@ -1,0 +1,135 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|l|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    {\color[HTML]{FFFFFF} R-time(m)} &
+    {\color[HTML]{FFFFFF} Loss combination} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} Iou 4} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    125 &
+    CE,Dice,Boundary &
+    0.363 &
+    0.942 &
+    0.118 &
+    0.269 &
+    0.148 &
+    0.337 &
+    0.616 &
+    0.481 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    330 &
+    CE,Dice,HD\textsubscript{1} &
+    0.314 &
+    0.954 &
+    0.039 &
+    0.244 &
+    0.074 &
+    0.260 &
+    0.527 &
+    0.400 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    219 &
+    CE,Tversky,Boundary &
+    0.360 &
+    0.926 &
+    0.132 &
+    0.282 &
+    0.155 &
+    0.303 &
+    0.610 &
+    0.480 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    318 &
+    CE,Tversky,HD\textsubscript{1} &
+    0.301 &
+    0.928 &
+    0.025 &
+    0.180 &
+    0.084 &
+    0.288 &
+    0.487 &
+    0.402 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{\textbf{5}} &
+    \textbf{207} &
+    \textbf{Focal,Dice,Boundary} &
+    \textbf{0.381} &
+    \textbf{0.940} &
+    \textbf{0.128} &
+    \textbf{0.299} &
+    \textbf{0.147} &
+    \textbf{0.388} &
+    \textbf{0.624} &
+    \textbf{0.485} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    348 &
+    Focal,Dice,HD\textsubscript{1} &
+    0.324 &
+    0.938 &
+    0.037 &
+    0.272 &
+    0.051 &
+    0.320 &
+    0.542 &
+    0.412 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    154 &
+    Focal,Tversky,Boundary &
+    0.344 &
+    0.943 &
+    0.162 &
+    0.248 &
+    0.164 &
+    0.205 &
+    0.589 &
+    0.475 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{8} &
+    237 &
+    Focal,Tversky,HD\textsubscript{1} &
+    0.325 &
+    0.942 &
+    0.036 &
+    0.277 &
+    0.057 &
+    0.311 &
+    0.547 &
+    0.412 &
+    PPV \\ \hline
+  \textbf{} &
+    \textbf{} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.339}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.939}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.085}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.259}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.110}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.302}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.568}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.443}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{3-12} 
+  \end{tabular}%
+  }
+  \caption{Table lists a summary of the top 3 results for every triple loss combination. Individual models have been trained with different strategies. The full table with all 24 models can be viewed in the appendix in \secref{subsubsec:loss_combination_results_idrid_triple_long}. The averagely best triple loss combination for this dataset with an \ac{IoU} of $0.381$ was achieved by the combination of \ac{FL}, \ac{DSCL} and \ac{BL}. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:loss_combination_results_idrid_triple_short}
+  \end{table}

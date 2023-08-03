@@ -1,0 +1,715 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|l|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    {\color[HTML]{FFFFFF} R-time(m)} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} Selection \%} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} &
+    {\color[HTML]{FFFFFF} pbm\_alpha} &
+    {\color[HTML]{FFFFFF} pbm\_I} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    20 &
+    BL,CE &
+    0.32 &
+    0.043 &
+    0.171 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.202 &
+    0.048 &
+    PPV &
+    6.304 &
+    0.975 \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    34 &
+    BL,CE &
+    1.00 &
+    0.035 &
+    0.000 &
+    0.006 &
+    0.000 &
+    0.136 &
+    0.036 &
+    0.308 &
+    TPR &
+    9.241 &
+    0.942 \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    26 &
+    BL,CE &
+    0.32 &
+    0.024 &
+    0.065 &
+    0.001 &
+    0.000 &
+    0.031 &
+    0.257 &
+    0.259 &
+    TPR &
+    9.000 &
+    0.586 \\ \hline
+  \textit{\textbf{}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{BL,CE Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.034}} &
+    \textit{\textbf{0.079}} &
+    \textit{\textbf{0.002}} &
+    \textit{\textbf{0.000}} &
+    \textit{\textbf{0.056}} &
+    \textit{\textbf{0.165}} &
+    \textit{\textbf{0.205}} &
+    \textit{\textbf{TPR}} &
+    \textit{\textbf{8.182}} &
+    \textit{\textbf{0.834}} \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    38 &
+    BL,FL &
+    1.00 &
+    0.734 &
+    0.979 &
+    0.811 &
+    0.526 &
+    0.621 &
+    0.880 &
+    0.793 &
+    PPV &
+    3.391 &
+    0.928 \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    40 &
+    BL,FL &
+    0.64 &
+    0.646 &
+    0.958 &
+    0.705 &
+    0.391 &
+    0.528 &
+    0.672 &
+    0.898 &
+    TPR &
+    4.000 &
+    1.000 \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    23 &
+    BL,FL &
+    0.32 &
+    0.235 &
+    0.941 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.235 &
+    0.250 &
+    TPR &
+    5.000 &
+    0.552 \\ \hline
+  \textit{\textbf{}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{BL,FL Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.538}} &
+    \textit{\textbf{0.959}} &
+    \textit{\textbf{0.505}} &
+    \textit{\textbf{0.306}} &
+    \textit{\textbf{0.383}} &
+    \textit{\textbf{0.595}} &
+    \textit{\textbf{0.647}} &
+    \textit{\textbf{TPR}} &
+    \textit{\textbf{4.130}} &
+    \textit{\textbf{0.827}} \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    36 &
+    CE,DL &
+    1.00 &
+    0.739 &
+    0.985 &
+    0.785 &
+    0.545 &
+    0.640 &
+    0.843 &
+    0.829 &
+    PPV &
+    9.000 &
+    0.904 \\ \hline
+  \multicolumn{1}{|c|}{8} &
+    46 &
+    CE,DL &
+    1.00 &
+    0.736 &
+    0.978 &
+    0.713 &
+    0.527 &
+    0.727 &
+    0.796 &
+    0.899 &
+    TPR &
+    10.000 &
+    0.697 \\ \hline
+  \multicolumn{1}{|c|}{9} &
+    47 &
+    CE,DL &
+    1.00 &
+    0.734 &
+    0.980 &
+    0.752 &
+    0.574 &
+    0.629 &
+    0.862 &
+    0.819 &
+    PPV &
+    8.000 &
+    0.940 \\ \hline
+  \textit{\textbf{}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{CE,DL Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.736}} &
+    \textit{\textbf{0.981}} &
+    \textit{\textbf{0.750}} &
+    \textit{\textbf{0.548}} &
+    \textit{\textbf{0.665}} &
+    \textit{\textbf{0.834}} &
+    \textit{\textbf{0.849}} &
+    \textit{\textbf{TPR}} &
+    \textit{\textbf{9.000}} &
+    \textit{\textbf{0.847}} \\ \hline
+  \multicolumn{1}{|c|}{10} &
+    27 &
+    CE,TL &
+    0.64 &
+    0.739 &
+    0.980 &
+    0.733 &
+    0.555 &
+    0.689 &
+    0.823 &
+    0.871 &
+    TPR &
+    7.000 &
+    1.000 \\ \hline
+  \multicolumn{1}{|c|}{11} &
+    28 &
+    CE,TL &
+    1.00 &
+    0.738 &
+    0.979 &
+    0.697 &
+    0.570 &
+    0.708 &
+    0.808 &
+    0.890 &
+    TPR &
+    9.758 &
+    0.521 \\ \hline
+  \multicolumn{1}{|c|}{12} &
+    29 &
+    CE,TL &
+    1.00 &
+    0.733 &
+    0.978 &
+    0.671 &
+    0.611 &
+    0.672 &
+    0.807 &
+    0.878 &
+    TPR &
+    8.151 &
+    0.550 \\ \hline
+  \textit{\textbf{}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{CE,TL Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.737}} &
+    \textit{\textbf{0.979}} &
+    \textit{\textbf{0.700}} &
+    \textit{\textbf{0.579}} &
+    \textit{\textbf{0.690}} &
+    \textit{\textbf{0.813}} &
+    \textit{\textbf{0.879}} &
+    \textit{\textbf{TPR}} &
+    \textit{\textbf{8.303}} &
+    \textit{\textbf{0.690}} \\ \hline
+  \multicolumn{1}{|c|}{13} &
+    57 &
+    DL,BL &
+    1.00 &
+    0.541 &
+    0.971 &
+    0.350 &
+    0.345 &
+    0.499 &
+    0.675 &
+    0.630 &
+    PPV &
+    2.889 &
+    0.884 \\ \hline
+  \multicolumn{1}{|c|}{14} &
+    36 &
+    DL,BL &
+    1.00 &
+    0.532 &
+    0.966 &
+    0.408 &
+    0.515 &
+    0.239 &
+    0.783 &
+    0.564 &
+    PPV &
+    1.818 &
+    0.575 \\ \hline
+  \multicolumn{1}{|c|}{15} &
+    35 &
+    DL,BL &
+    0.64 &
+    0.004 &
+    0.000 &
+    0.000 &
+    0.017 &
+    0.000 &
+    0.004 &
+    0.243 &
+    TPR &
+    9.444 &
+    0.419 \\ \hline
+  \textit{\textbf{}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{DL,BL Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.359}} &
+    \textit{\textbf{0.646}} &
+    \textit{\textbf{0.253}} &
+    \textit{\textbf{0.292}} &
+    \textit{\textbf{0.246}} &
+    \textit{\textbf{0.488}} &
+    \textit{\textbf{0.479}} &
+    \textit{\textbf{PPV}} &
+    \textit{\textbf{4.717}} &
+    \textit{\textbf{0.626}} \\ \hline
+  \multicolumn{1}{|c|}{16} &
+    54 &
+    DL,HL\textsubscript{1} &
+    1.00 &
+    0.697 &
+    0.970 &
+    0.643 &
+    0.639 &
+    0.536 &
+    0.764 &
+    0.859 &
+    TPR &
+    7.676 &
+    0.996 \\ \hline
+  \multicolumn{1}{|c|}{17} &
+    91 &
+    DL,HL\textsubscript{1} &
+    1.00 &
+    0.662 &
+    0.974 &
+    0.783 &
+    0.447 &
+    0.444 &
+    0.824 &
+    0.743 &
+    PPV &
+    2.738 &
+    0.905 \\ \hline
+  \multicolumn{1}{|c|}{18} &
+    51 &
+    DL,HL\textsubscript{1} &
+    1.00 &
+    0.631 &
+    0.970 &
+    0.787 &
+    0.468 &
+    0.299 &
+    0.826 &
+    0.685 &
+    PPV &
+    7.802 &
+    0.854 \\ \hline
+  \textit{\textbf{}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{DL,HL\textsubscript{1} Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.663}} &
+    \textit{\textbf{0.972}} &
+    \textit{\textbf{0.737}} &
+    \textit{\textbf{0.518}} &
+    \textit{\textbf{0.426}} &
+    \textit{\textbf{0.804}} &
+    \textit{\textbf{0.762}} &
+    \textit{\textbf{PPV}} &
+    \textit{\textbf{6.072}} &
+    \textit{\textbf{0.918}} \\ \hline
+  \multicolumn{1}{|c|}{19} &
+    44 &
+    FL,DL &
+    1.00 &
+    0.714 &
+    0.978 &
+    0.744 &
+    0.550 &
+    0.582 &
+    0.856 &
+    0.803 &
+    PPV &
+    9.000 &
+    0.721 \\ \hline
+  \multicolumn{1}{|c|}{20} &
+    24 &
+    FL,DL &
+    0.32 &
+    0.706 &
+    0.980 &
+    0.655 &
+    0.578 &
+    0.611 &
+    0.821 &
+    0.828 &
+    TPR &
+    4.000 &
+    0.661 \\ \hline
+  \multicolumn{1}{|c|}{21} &
+    27 &
+    FL,DL &
+    1.00 &
+    0.702 &
+    0.979 &
+    0.787 &
+    0.593 &
+    0.450 &
+    0.815 &
+    0.764 &
+    PPV &
+    7.851 &
+    0.818 \\ \hline
+  \textit{\textbf{}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{FL,DL Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.707}} &
+    \textit{\textbf{0.979}} &
+    \textit{\textbf{0.729}} &
+    \textit{\textbf{0.574}} &
+    \textit{\textbf{0.548}} &
+    \textit{\textbf{0.831}} &
+    \textit{\textbf{0.798}} &
+    \textit{\textbf{PPV}} &
+    \textit{\textbf{6.950}} &
+    \textit{\textbf{0.733}} \\ \hline
+  \multicolumn{1}{|c|}{22} &
+    86 &
+    FL,TL &
+    1.00 &
+    0.750 &
+    0.980 &
+    0.720 &
+    0.594 &
+    0.705 &
+    0.826 &
+    0.899 &
+    TPR &
+    10.000 &
+    0.611 \\ \hline
+  \multicolumn{1}{|c|}{23} &
+    41 &
+    FL,TL &
+    1.00 &
+    0.741 &
+    0.978 &
+    0.700 &
+    0.601 &
+    0.683 &
+    0.819 &
+    0.884 &
+    TPR &
+    8.000 &
+    0.918 \\ \hline
+  \multicolumn{1}{|c|}{24} &
+    22 &
+    FL,TL &
+    0.64 &
+    0.734 &
+    0.978 &
+    0.701 &
+    0.520 &
+    0.737 &
+    0.796 &
+    0.897 &
+    TPR &
+    4.163 &
+    0.879 \\ \hline
+  \textit{\textbf{}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{FL,TL Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.741}} &
+    \textit{\textbf{0.979}} &
+    \textit{\textbf{0.707}} &
+    \textit{\textbf{0.572}} &
+    \textit{\textbf{0.708}} &
+    \textit{\textbf{0.814}} &
+    \textit{\textbf{0.893}} &
+    \textit{\textbf{TPR}} &
+    \textit{\textbf{7.388}} &
+    \textit{\textbf{0.803}} \\ \hline
+  \multicolumn{1}{|c|}{25} &
+    61 &
+    HL\textsubscript{1},CE &
+    0.64 &
+    0.735 &
+    0.981 &
+    0.655 &
+    0.610 &
+    0.694 &
+    0.849 &
+    0.830 &
+    PPV &
+    5.586 &
+    0.708 \\ \hline
+  \multicolumn{1}{|c|}{26} &
+    57 &
+    HL\textsubscript{1},CE &
+    1.00 &
+    0.705 &
+    0.978 &
+    0.763 &
+    0.600 &
+    0.481 &
+    0.811 &
+    0.793 &
+    PPV &
+    4.893 &
+    0.780 \\ \hline
+  \multicolumn{1}{|c|}{27} &
+    31 &
+    HL\textsubscript{1},CE &
+    0.32 &
+    0.619 &
+    0.971 &
+    0.609 &
+    0.441 &
+    0.455 &
+    0.745 &
+    0.739 &
+    PPV &
+    3.746 &
+    0.297 \\ \hline
+   &
+    \textit{\textbf{}} &
+    \textit{\textbf{HL\textsubscript{1},CE Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.686}} &
+    \textit{\textbf{0.977}} &
+    \textit{\textbf{0.676}} &
+    \textit{\textbf{0.550}} &
+    \textit{\textbf{0.543}} &
+    \textit{\textbf{0.802}} &
+    \textit{\textbf{0.788}} &
+    \textit{\textbf{PPV}} &
+    \textit{\textbf{4.742}} &
+    \textit{\textbf{0.595}} \\ \hline
+  \multicolumn{1}{|c|}{28} &
+    56 &
+    HL\textsubscript{1},FL &
+    1.00 &
+    0.700 &
+    0.977 &
+    0.732 &
+    0.573 &
+    0.517 &
+    0.865 &
+    0.778 &
+    PPV &
+    4.892 &
+    0.646 \\ \hline
+  \multicolumn{1}{|c|}{29} &
+    94 &
+    HL\textsubscript{1},FL &
+    1.00 &
+    0.676 &
+    0.976 &
+    0.768 &
+    0.542 &
+    0.418 &
+    0.890 &
+    0.720 &
+    PPV &
+    3.787 &
+    0.705 \\ \hline
+  \multicolumn{1}{|c|}{30} &
+    59 &
+    HL\textsubscript{1},FL &
+    0.64 &
+    0.665 &
+    0.974 &
+    0.661 &
+    0.408 &
+    0.619 &
+    0.785 &
+    0.809 &
+    TPR &
+    5.876 &
+    0.975 \\ \hline
+   &
+    \textit{\textbf{}} &
+    \textit{\textbf{HL\textsubscript{1},FL Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.680}} &
+    \textit{\textbf{0.976}} &
+    \textit{\textbf{0.721}} &
+    \textit{\textbf{0.508}} &
+    \textit{\textbf{0.518}} &
+    \textit{\textbf{0.847}} &
+    \textit{\textbf{0.769}} &
+    \textit{\textbf{PPV}} &
+    \textit{\textbf{4.852}} &
+    \textit{\textbf{0.775}} \\ \hline
+  \multicolumn{1}{|c|}{31} &
+    39 &
+    TL,BL &
+    0.60 &
+    0.691 &
+    0.977 &
+    0.763 &
+    0.489 &
+    0.533 &
+    0.831 &
+    0.785 &
+    PPV &
+    1.000 &
+    1.000 \\ \hline
+  \multicolumn{1}{|c|}{32} &
+    46 &
+    TL,BL &
+    0.64 &
+    0.688 &
+    0.973 &
+    0.585 &
+    0.617 &
+    0.578 &
+    0.800 &
+    0.876 &
+    TPR &
+    1.000 &
+    0.958 \\ \hline
+  \multicolumn{1}{|c|}{33} &
+    36 &
+    TL,BL &
+    0.64 &
+    0.191 &
+    0.765 &
+    0.000 &
+    0.000 &
+    0.000 &
+    0.232 &
+    0.203 &
+    PPV &
+    5.000 &
+    0.905 \\ \hline
+   &
+    \textit{\textbf{}} &
+    \textit{\textbf{TL,BL Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.523}} &
+    \textit{\textbf{0.905}} &
+    \textit{\textbf{0.450}} &
+    \textit{\textbf{0.369}} &
+    \textit{\textbf{0.370}} &
+    \textit{\textbf{0.621}} &
+    \textit{\textbf{0.621}} &
+    \textit{\textbf{TPR}} &
+    \textit{\textbf{2.333}} &
+    \textit{\textbf{0.954}} \\ \hline
+  \multicolumn{1}{|c|}{34} &
+    59 &
+    TL,HL\textsubscript{1} &
+    0.64 &
+    0.596 &
+    0.965 &
+    0.617 &
+    0.296 &
+    0.505 &
+    0.709 &
+    0.760 &
+    TPR &
+    6.428 &
+    0.677 \\ \hline
+  \multicolumn{1}{|c|}{35} &
+    86 &
+    TL,HL\textsubscript{1} &
+    1.00 &
+    0.576 &
+    0.950 &
+    0.567 &
+    0.275 &
+    0.511 &
+    0.639 &
+    0.840 &
+    TPR &
+    7.543 &
+    0.351 \\ \hline
+  \multicolumn{1}{|c|}{36} &
+    85 &
+    TL,HL\textsubscript{1} &
+    1.00 &
+    0.525 &
+    0.932 &
+    0.395 &
+    0.217 &
+    0.554 &
+    0.569 &
+    0.842 &
+    TPR &
+    7.886 &
+    0.359 \\ \hline
+   &
+    \textit{\textbf{}} &
+    \textit{\textbf{TL,HL\textsubscript{1} Result}} &
+    \textit{\textbf{}} &
+    \textit{\textbf{0.565}} &
+    \textit{\textbf{0.949}} &
+    \textit{\textbf{0.526}} &
+    \textit{\textbf{0.262}} &
+    \textit{\textbf{0.523}} &
+    \textit{\textbf{0.639}} &
+    \textit{\textbf{0.814}} &
+    \textit{\textbf{TPR}} &
+    \textit{\textbf{7.286}} &
+    \textit{\textbf{0.462}} \\ \cline{3-14} 
+   &
+    \textit{\textbf{}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.581}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.865}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.563}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.423}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.473}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.688}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.709}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{TPR}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{6.163}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.755}}} \\ \cline{3-14} 
+  \end{tabular}%
+  }
+  \caption[Top double continous loss combination results (Medaka Fish)]{Table lists the top 3 results for every double loss combination using the performance-based continuous merge strategy. The columns $IoU_0,\hdots,IoU_3$ represent the four classes, Background, Bulbus, Atrium and Ventricle.  The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:continous_loss_combination_medaka_double_long}
+  \end{table}

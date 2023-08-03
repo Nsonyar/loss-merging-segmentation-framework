@@ -1,0 +1,111 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|l|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    {\color[HTML]{FFFFFF} R-time(m)} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} IoU 0} &
+    {\color[HTML]{FFFFFF} IoU 1} &
+    {\color[HTML]{FFFFFF} IoU 2} &
+    {\color[HTML]{FFFFFF} IoU 3} &
+    {\color[HTML]{FFFFFF} IoU 4} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{\textbf{1}} &
+    \textbf{109} &
+    \textbf{AVG} &
+    \textbf{0.389} &
+    \textbf{0.943} &
+    \textbf{0.153} &
+    \textbf{0.303} &
+    \textbf{0.148} &
+    \textbf{0.398} &
+    \textbf{0.637} &
+    \textbf{0.483} &
+    \textbf{PPV} \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    123 &
+    HARMONIC &
+    0.329 &
+    0.931 &
+    0.022 &
+    0.261 &
+    0.035 &
+    0.397 &
+    0.537 &
+    0.423 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    57 &
+    MAX &
+    0.380 &
+    0.925 &
+    0.199 &
+    0.295 &
+    0.174 &
+    0.306 &
+    0.633 &
+    0.504 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    211 &
+    MIN &
+    0.342 &
+    0.934 &
+    0.050 &
+    0.291 &
+    0.044 &
+    0.389 &
+    0.581 &
+    0.421 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    90 &
+    NWS &
+    0.349 &
+    0.942 &
+    0.086 &
+    0.276 &
+    0.148 &
+    0.292 &
+    0.616 &
+    0.452 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    134 &
+    WS &
+    0.382 &
+    0.948 &
+    0.149 &
+    0.291 &
+    0.177 &
+    0.344 &
+    0.637 &
+    0.497 &
+    PPV \\ \hline
+   &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Sum}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.362}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.937}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.110}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.286}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.121}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.354}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.607}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.463}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{3-12} 
+  \end{tabular}%
+  }
+  \caption{Table lists the average \ac{IoU} results for every merge strategy. The full corresponding table with all models listed individually, can be viewed in \secref{subsubsec:merge_strategy_results_idrid_double_long}. The columns $IoU_0,\hdots,IoU_4$ represent the five classes, Background, Haemorrhages, Hard Exudates, Microaneurys and Optic Disc. The column titled \squote{PPV vs. TPR}" illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:merge_strategy_results_idrid_double_short}
+  \end{table}

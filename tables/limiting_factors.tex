@@ -1,0 +1,81 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{cc|ccccccc|}
+  \cline{3-9}
+  {\color[HTML]{000000} } &
+    {\color[HTML]{000000} } &
+    \multicolumn{7}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Limiting factors}}} \\ \cline{2-9} 
+  \multicolumn{1}{c|}{{\color[HTML]{000000} }} &
+    \cellcolor[HTML]{9B7DD4}{\color[HTML]{000000} Loss} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} \begin{tabular}[c]{@{}c@{}}Distance\\ insensitivity\end{tabular}}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} \begin{tabular}[c]{@{}c@{}}Boundary \\ insensitivity\end{tabular}}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} \begin{tabular}[c]{@{}c@{}}Region-size\\ sensitivity\end{tabular}}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} \begin{tabular}[c]{@{}c@{}}FP / FN weight\\ insensitivity\end{tabular}}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} \begin{tabular}[c]{@{}c@{}}Outlier\\ sensitivity\end{tabular}}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} \begin{tabular}[c]{@{}c@{}}Cumputational\\ complexity\end{tabular}}} &
+    \cellcolor[HTML]{9B7DD4}{\color[HTML]{FFFFFF} \begin{tabular}[c]{@{}c@{}}Manual parameter\\ tuning\end{tabular}} \\ \cline{2-9} 
+  \multicolumn{1}{c|}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} }} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} CE} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} ++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} O(NCH*W)}} &
+    {\color[HTML]{000000} -} \\ \cline{2-9} 
+  \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{6638B6}{\color[HTML]{FFFFFF} \textbf{DB}}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} FL} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} ++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} O(NCH*W)}} &
+    {\color[HTML]{000000} +++} \\ \cline{2-9} 
+  \multicolumn{1}{c|}{\cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} }} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} DL} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} ++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} ++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} O(NCH*W)}} &
+    {\color[HTML]{000000} -} \\ \cline{2-9} 
+  \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{00A9CE}{\color[HTML]{FFFFFF} \textbf{RB}}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} TL} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} ++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} ++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} O(NCH*W)}} &
+    {\color[HTML]{000000} +++} \\ \cline{2-9} 
+  \multicolumn{1}{c|}{\cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} }} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} HL} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} O(2NCH*W}} &
+    {\color[HTML]{000000} ++} \\ \cline{2-9} 
+  \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{99DDFD}{\color[HTML]{FFFFFF} \textbf{BB}}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} BL} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} -}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} +++}} &
+    \multicolumn{1}{c|}{{\color[HTML]{000000} O(NCH*W)}} &
+    {\color[HTML]{000000} ++} \\ \cline{2-9} 
+  \end{tabular}%
+  }
+  \caption{Summary of limiting factors. +++ strong, ++ moderate, + weak - no limitation}
+  \label{tab:limiting_factors}
+  \end{table}

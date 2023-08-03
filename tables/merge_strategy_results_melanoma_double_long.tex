@@ -1,0 +1,596 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{ccl|l|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    {\color[HTML]{FFFFFF} Selection \%} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{1} &
+    \multicolumn{1}{c|}{109} &
+    CE,DL &
+    AVG &
+    1.00 &
+    0.662 &
+    0.820 &
+    0.810 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{2} &
+    \multicolumn{1}{c|}{151} &
+    TL,BL &
+    AVG &
+    1.00 &
+    0.653 &
+    0.825 &
+    0.776 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{3} &
+    \multicolumn{1}{c|}{109} &
+    CE,TL &
+    AVG &
+    1.00 &
+    0.642 &
+    0.821 &
+    0.763 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{4} &
+    \multicolumn{1}{c|}{102} &
+    BL,FL &
+    AVG &
+    0.64 &
+    0.633 &
+    0.792 &
+    0.792 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{5} &
+    \multicolumn{1}{c|}{101} &
+    DL,BL &
+    AVG &
+    0.64 &
+    0.588 &
+    0.793 &
+    0.698 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{6} &
+    \multicolumn{1}{c|}{54} &
+    TL,BL &
+    AVG &
+    0.32 &
+    0.577 &
+    0.752 &
+    0.735 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{7} &
+    \multicolumn{1}{c|}{153} &
+    HL\textsubscript{1},FL &
+    AVG &
+    0.64 &
+    0.577 &
+    0.799 &
+    0.709 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{8} &
+    \multicolumn{1}{c|}{39} &
+    CE,DL &
+    AVG &
+    0.32 &
+    0.560 &
+    0.736 &
+    0.738 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{9} &
+    \multicolumn{1}{c|}{81} &
+    HL\textsubscript{1},FL &
+    AVG &
+    0.32 &
+    0.559 &
+    0.735 &
+    0.712 &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+     &
+    \textit{\textbf{AVG Result}} &
+     &
+    \textit{\textbf{0.606}} &
+    \textit{\textbf{0.786}} &
+    \textit{\textbf{0.748}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{10} &
+    \multicolumn{1}{c|}{102} &
+    BL,FL &
+    HARMONIC &
+    0.64 &
+    0.644 &
+    0.842 &
+    0.762 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{11} &
+    \multicolumn{1}{c|}{72} &
+    CE,DL &
+    HARMONIC &
+    0.64 &
+    0.643 &
+    0.829 &
+    0.765 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{12} &
+    \multicolumn{1}{c|}{101} &
+    BL,CE &
+    HARMONIC &
+    0.64 &
+    0.640 &
+    0.814 &
+    0.791 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{13} &
+    \multicolumn{1}{c|}{153} &
+    TL,BL &
+    HARMONIC &
+    1.00 &
+    0.633 &
+    0.794 &
+    0.780 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{14} &
+    \multicolumn{1}{c|}{152} &
+    BL,CE &
+    HARMONIC &
+    1.00 &
+    0.618 &
+    0.803 &
+    0.738 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{15} &
+    \multicolumn{1}{c|}{232} &
+    DL,HL\textsubscript{1} &
+    HARMONIC &
+    1.00 &
+    0.613 &
+    0.821 &
+    0.736 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{16} &
+    \multicolumn{1}{c|}{81} &
+    HL\textsubscript{1},CE &
+    HARMONIC &
+    0.32 &
+    0.602 &
+    0.764 &
+    0.758 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{17} &
+    \multicolumn{1}{c|}{41} &
+    FL,DL &
+    HARMONIC &
+    0.32 &
+    0.587 &
+    0.796 &
+    0.726 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{18} &
+    \multicolumn{1}{c|}{56} &
+    BL,FL &
+    HARMONIC &
+    0.32 &
+    0.580 &
+    0.795 &
+    0.696 &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+     &
+    \textit{\textbf{HARMONIC Result}} &
+     &
+    \textit{\textbf{0.618}} &
+    \textit{\textbf{0.806}} &
+    \textit{\textbf{0.750}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{19} &
+    \multicolumn{1}{c|}{111} &
+    FL,DL &
+    MAX &
+    1.00 &
+    0.639 &
+    0.836 &
+    0.768 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{20} &
+    \multicolumn{1}{c|}{152} &
+    HL\textsubscript{1},FL &
+    MAX &
+    0.64 &
+    0.636 &
+    0.775 &
+    0.839 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{21} &
+    \multicolumn{1}{c|}{108} &
+    CE,TL &
+    MAX &
+    1.00 &
+    0.627 &
+    0.835 &
+    0.749 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{22} &
+    \multicolumn{1}{c|}{40} &
+    FL,TL &
+    MAX &
+    0.32 &
+    0.597 &
+    0.735 &
+    0.755 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{23} &
+    \multicolumn{1}{c|}{80} &
+    TL,HL\textsubscript{1} &
+    MAX &
+    0.32 &
+    0.596 &
+    0.788 &
+    0.745 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{24} &
+    \multicolumn{1}{c|}{108} &
+    CE,DL &
+    MAX &
+    1.00 &
+    0.592 &
+    0.761 &
+    0.723 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{25} &
+    \multicolumn{1}{c|}{82} &
+    HL\textsubscript{1},CE &
+    MAX &
+    0.32 &
+    0.586 &
+    0.768 &
+    0.760 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{26} &
+    \multicolumn{1}{c|}{73} &
+    FL,TL &
+    MAX &
+    0.64 &
+    0.545 &
+    0.777 &
+    0.656 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{27} &
+    \multicolumn{1}{c|}{150} &
+    TL,HL\textsubscript{1} &
+    MAX &
+    0.64 &
+    0.518 &
+    0.777 &
+    0.625 &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+     &
+    \textit{\textbf{MAX Result}} &
+     &
+    \textit{\textbf{0.593}} &
+    \textit{\textbf{0.784}} &
+    \textit{\textbf{0.736}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{28} &
+    \multicolumn{1}{c|}{74} &
+    FL,DL &
+    MIN &
+    0.64 &
+    0.658 &
+    0.823 &
+    0.806 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{29} &
+    \multicolumn{1}{c|}{41} &
+    FL,DL &
+    MIN &
+    0.32 &
+    0.648 &
+    0.800 &
+    0.798 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{30} &
+    \multicolumn{1}{c|}{151} &
+    TL,HL\textsubscript{1} &
+    MIN &
+    0.64 &
+    0.645 &
+    0.795 &
+    0.817 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{31} &
+    \multicolumn{1}{c|}{88} &
+    DL,BL &
+    MIN &
+    0.64 &
+    0.632 &
+    0.801 &
+    0.778 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{32} &
+    \multicolumn{1}{c|}{109} &
+    CE,DL &
+    MIN &
+    1.00 &
+    0.624 &
+    0.832 &
+    0.751 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{33} &
+    \multicolumn{1}{c|}{132} &
+    DL,BL &
+    MIN &
+    1.00 &
+    0.621 &
+    0.787 &
+    0.790 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{34} &
+    \multicolumn{1}{c|}{232} &
+    HL\textsubscript{1},FL &
+    MIN &
+    1.00 &
+    0.619 &
+    0.822 &
+    0.742 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{35} &
+    \multicolumn{1}{c|}{81} &
+    HL\textsubscript{1},FL &
+    MIN &
+    0.32 &
+    0.610 &
+    0.773 &
+    0.758 &
+    PPV \\ \hline
+  \end{tabular}%
+  }
+  \end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{ccl|l|c|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{000000} 
+  \multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} No.}} &
+    \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} R-time(m)}} &
+    {\color[HTML]{FFFFFF} Loss} &
+    {\color[HTML]{FFFFFF} Strategy} &
+    {\color[HTML]{FFFFFF} Selection \%} &
+    {\color[HTML]{FFFFFF} IoU} &
+    {\color[HTML]{FFFFFF} PPV} &
+    {\color[HTML]{FFFFFF} TPR} &
+    {\color[HTML]{FFFFFF} PPV vs. TPR} \\ \hline
+  \multicolumn{1}{|c|}{36} &
+    \multicolumn{1}{c|}{36} &
+    CE,TL &
+    MIN &
+    0.32 &
+    0.585 &
+    0.731 &
+    0.754 &
+    TPR \\ \hline
+   &
+    \textit{\textbf{}} &
+     &
+    \textit{\textbf{MIN Result}} &
+     &
+    \textit{\textbf{0.627}} &
+    \textit{\textbf{0.796}} &
+    \textit{\textbf{0.777}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{37} &
+    \multicolumn{1}{c|}{152} &
+    DL,BL &
+    NWS &
+    1.00 &
+    0.671 &
+    0.817 &
+    0.830 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{38} &
+    \multicolumn{1}{c|}{109} &
+    CE,DL &
+    NWS &
+    1.00 &
+    0.657 &
+    0.818 &
+    0.808 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{39} &
+    \multicolumn{1}{c|}{112} &
+    FL,DL &
+    NWS &
+    1.00 &
+    0.640 &
+    0.816 &
+    0.768 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{40} &
+    \multicolumn{1}{c|}{71} &
+    CE,TL &
+    NWS &
+    0.64 &
+    0.639 &
+    0.821 &
+    0.774 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{41} &
+    \multicolumn{1}{c|}{102} &
+    BL,FL &
+    NWS &
+    0.64 &
+    0.631 &
+    0.811 &
+    0.758 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{42} &
+    \multicolumn{1}{c|}{152} &
+    HL\textsubscript{1},CE &
+    NWS &
+    0.64 &
+    0.631 &
+    0.800 &
+    0.785 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{43} &
+    \multicolumn{1}{c|}{54} &
+    TL,BL &
+    NWS &
+    0.32 &
+    0.585 &
+    0.749 &
+    0.739 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{44} &
+    \multicolumn{1}{c|}{37} &
+    CE,TL &
+    NWS &
+    0.32 &
+    0.584 &
+    0.762 &
+    0.717 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{45} &
+    \multicolumn{1}{c|}{56} &
+    BL,FL &
+    NWS &
+    0.32 &
+    0.584 &
+    0.736 &
+    0.719 &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+     &
+    \textit{\textbf{NWS Result}} &
+     &
+    \textit{\textbf{0.625}} &
+    \textit{\textbf{0.792}} &
+    \textit{\textbf{0.766}} &
+    \textit{\textbf{PPV}} \\ \hline
+  \multicolumn{1}{|c|}{46} &
+    \multicolumn{1}{c|}{152} &
+    TL,BL &
+    WS &
+    1.00 &
+    0.669 &
+    0.832 &
+    0.805 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{47} &
+    \multicolumn{1}{c|}{74} &
+    FL,TL &
+    WS &
+    0.64 &
+    0.643 &
+    0.825 &
+    0.764 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{48} &
+    \multicolumn{1}{c|}{232} &
+    HL\textsubscript{1},CE &
+    WS &
+    1.00 &
+    0.642 &
+    0.797 &
+    0.819 &
+    TPR \\ \hline
+  \multicolumn{1}{|c|}{49} &
+    \multicolumn{1}{c|}{152} &
+    DL,BL &
+    WS &
+    1.00 &
+    0.642 &
+    0.794 &
+    0.793 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{50} &
+    \multicolumn{1}{c|}{72} &
+    CE,DL &
+    WS &
+    0.64 &
+    0.629 &
+    0.789 &
+    0.786 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{51} &
+    \multicolumn{1}{c|}{100} &
+    TL,BL &
+    WS &
+    0.64 &
+    0.613 &
+    0.778 &
+    0.758 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{52} &
+    \multicolumn{1}{c|}{55} &
+    DL,BL &
+    WS &
+    0.32 &
+    0.608 &
+    0.790 &
+    0.775 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{53} &
+    \multicolumn{1}{c|}{41} &
+    FL,DL &
+    WS &
+    0.32 &
+    0.596 &
+    0.786 &
+    0.768 &
+    PPV \\ \hline
+  \multicolumn{1}{|c|}{54} &
+    \multicolumn{1}{c|}{56} &
+    BL,CE &
+    WS &
+    0.32 &
+    0.583 &
+    0.789 &
+    0.704 &
+    PPV \\ \hline
+   &
+    \textit{\textbf{}} &
+     &
+    \textit{\textbf{WS Result}} &
+     &
+    \textit{\textbf{0.625}} &
+    \textit{\textbf{0.798}} &
+    \textit{\textbf{0.775}} &
+    \textit{\textbf{PPV}} \\ \cline{4-4} \cline{6-9} 
+   &
+    \textit{\textbf{}} &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{Grand Average}}} &
+     &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.616}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.794}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{0.759}}} &
+    \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textit{\textbf{PPV}}} \\ \cline{4-4} \cline{6-9} 
+  \end{tabular}%
+  }
+  \caption[Top double discrete merge strategy results (Skin Lesion)]{Table contains 54 trained models representing the top 3 double loss combinations for every selection percentage and discrete configuration setting. The $IoU$ column reflects the average outcomes contrasting the foreground class against the background class. The column titled \squote{PPV vs. TPR} illustrates the trade-off between a high \acf{PPV} and low \acf{TPR}, or vice versa, for each model.}
+  \label{tab:merge_strategy_results_melanoma_double_long}
+  \end{table}
