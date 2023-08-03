@@ -1,6 +1,28 @@
 # Unified-Loss-Merging-Framework-for-Enhanced-Semantic-Segmentation
 ![AuthorLanz](https://img.shields.io/static/v1?label=Author&message=Martin%20Lanz&style=for-the-badge&logo=superuser&logoWidth=20&labelColor=6638B6&color=00A9CE)
 
+Semantic segmentation is an important task in computer vision, aiming to assign a class label to every pixel
+in an image, enabling applications such as autonomous driving, medical image analysis, or facial recogni-
+tion. Deep learning has significantly improved semantic segmentation performance in recent years. How-
+ever, optimizinglossfunctionsremainsanopenchallengeduetocriticallimitationsifusedindividually. This
+project investigates six popular loss functions and introduces a merging framework to form new combined
+losses, addressing these limitations and improving segmentation performance.
+The project begins by providing a comprehensive overview of the fundamentals of Machine Learning (ML)
+and semantic segmentation, including terminology, objectives, metrics, and architectures. The literature
+review covers a broad range of techniques for generally improving semantic segmentation. Subsequently,
+the limiting factors of six loss functions are discussed, and a methodology is proposed to merge multiple
+losses into a single final loss, which aims to address the shortcomings of models trained with standard
+single losses.
+A U-Net-based segmentation framework is presented to validate the approach, incorporating all theoret-
+ically described methods in code. Several experiments on multiple datasets are conducted to compare
+the performance of the proposed methods against baseline models trained with single losses. Quantita-
+tive and qualitative results are presented, along with an ablation study to evaluate further the impact of the
+presented loss merging strategies.
+This unified approach demonstrates that combining multiple loss functions can significantly improve se-
+mantic segmentation performance for a whole set of loss combinations across multiple datasets. The
+project aims to contribute to advancing semantic segmentation research and provides a foundation for
+future investigations into more effective loss function design and optimization.
+
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Configuration for Visual Studio Code](#configuration-for-visual-studio-code)
